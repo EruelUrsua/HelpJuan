@@ -51,7 +51,7 @@ git push origin -u <Branch Name>
 Use git pull command
 ```
 git pull
-
+```
 #### Second Option:
 Use git fetch command
 
