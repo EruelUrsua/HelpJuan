@@ -46,6 +46,15 @@ git push origin -u <Branch Name>
 8. Go to Upstream repository then click merge changes
 
 ### How to Update Fork Repository
+
+#### First Option:
+Use git pull command
+```
+git pull
+
+#### Second Option:
+Use git fetch command
+
 1. Check if upstream remote is available
 ```
 git remote -v
