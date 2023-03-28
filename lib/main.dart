@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:solutions_challenge_app/VolunteeringOpportunities/volunteeringOpportunities.dart';
+import 'package:solutions_challenge_app/profile.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Gillianne',
+      title: 'HelpJuan',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -28,5 +29,6 @@ class test extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return VolunteeringOpportunitiesPage();
+    // return Profile();
   }
 }
