@@ -42,30 +42,74 @@ class _VolunteeringOpportunitiesPageState
                   prefixIcon: Icon(Icons.search),
                 ),
               ), //search bar
-              Container(
-                margin: EdgeInsets.only(top: 15),
-                child: Placeholder(
-                  fallbackHeight: 170,
+              GestureDetector(
+                onTap: () {
+                  print("HI");
+                },
+                child: Container(
+                  margin: EdgeInsets.only(top: 15),
+                  width: 350,
+                  height: 170,
+                  child: Material(
+                    elevation: 3,
+                    color: Colors.white,
+                    shadowColor: Colors.black,
+                    borderRadius: BorderRadius.circular(20),
+                    child: Text('Mr Beast'),
+                  ),
                 ),
               ),
-              Container(
-                margin: EdgeInsets.only(top: 15),
-                child: Placeholder(
-                  fallbackHeight: 170,
+              GestureDetector(
+                onTap: () {
+                  print("HI");
+                },
+                child: Container(
+                  margin: EdgeInsets.only(top: 15),
+                  width: 350,
+                  height: 170,
+                  child: Material(
+                    elevation: 3,
+                    color: Colors.white,
+                    shadowColor: Colors.black,
+                    borderRadius: BorderRadius.circular(20),
+                    child: Text('Mr Beast'),
+                  ),
                 ),
               ),
-              Container(
-                margin: EdgeInsets.only(top: 15),
-                child: Placeholder(
-                  fallbackHeight: 170,
+              GestureDetector(
+                onTap: () {
+                  print("HI");
+                },
+                child: Container(
+                  margin: EdgeInsets.only(top: 15),
+                  width: 350,
+                  height: 170,
+                  child: Material(
+                    elevation: 3,
+                    color: Colors.white,
+                    shadowColor: Colors.black,
+                    borderRadius: BorderRadius.circular(20),
+                    child: Text('Mr Beast'),
+                  ),
                 ),
               ),
-              Container(
-                margin: EdgeInsets.only(top: 15),
-                child: Placeholder(
-                  fallbackHeight: 170,
+              GestureDetector(
+                onTap: () {
+                  print("HI");
+                },
+                child: Container(
+                  margin: EdgeInsets.only(top: 15, bottom: 10),
+                  width: 350,
+                  height: 170,
+                  child: Material(
+                    elevation: 3,
+                    color: Colors.white,
+                    shadowColor: Colors.black,
+                    borderRadius: BorderRadius.circular(20),
+                    child: Text('Mr Beast'),
+                  ),
                 ),
-              )
+              ),
             ],
           ),
         ),
