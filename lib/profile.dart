@@ -64,6 +64,18 @@ class Profile extends StatelessWidget {
               ],
             ),
           ),
+
+          Container(
+            margin: EdgeInsets.fromLTRB(20.0, 40, 0.0, 0.0),
+            child: Text(
+              'Upcoming Opportunities',
+              style: TextStyle(
+                fontSize: 20,
+                color: const Color(0xFF6E7181),
+                fontFamily: 'Questrial',
+              ),
+            ),
+          ),
         ],
       ),
     );
