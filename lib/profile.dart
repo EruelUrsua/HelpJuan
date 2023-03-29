@@ -50,6 +50,20 @@ class Profile extends StatelessWidget {
               ),
             ),
           ),
+
+          Container(
+            margin: EdgeInsets.fromLTRB(20.0, 20.0, 0.0, 0.0),
+            child: Row(
+              children: [
+                PhysicalModel(
+                  color: Colors.white,
+                  elevation: 5,
+                  borderRadius: BorderRadius.circular(15),
+                  child: Container(width: 350, height: 150),
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );
