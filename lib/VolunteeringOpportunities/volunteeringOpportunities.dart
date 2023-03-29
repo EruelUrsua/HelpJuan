@@ -41,7 +41,7 @@ class _VolunteeringOpportunitiesPageState
                   hintText: "Search",
                   prefixIcon: Icon(Icons.search),
                 ),
-              ),
+              ), //search bar
               Container(
                 margin: EdgeInsets.only(top: 15),
                 child: Placeholder(
