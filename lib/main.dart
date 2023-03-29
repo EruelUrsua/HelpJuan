@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:solutions_challenge_app/VolunteeringOpportunities/volunteeringOpportunities.dart';
 import 'package:solutions_challenge_app/profile.dart';
+import 'package:solutions_challenge_app/bnav.dart';
 
 void main() {
   runApp(const MyApp());
@@ -28,7 +29,7 @@ class test extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return VolunteeringOpportunitiesPage();
+    return Nav();
     // return Profile();
   }
 }
