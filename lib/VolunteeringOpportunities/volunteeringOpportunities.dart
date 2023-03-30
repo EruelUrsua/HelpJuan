@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:solutions_challenge_app/VolunteeringOpportunities/opportunitiesPage.dart';
 import 'package:solutions_challenge_app/bnav.dart';
 
 class VolunteeringOpportunitiesPage extends StatefulWidget {
@@ -41,11 +42,70 @@ class _VolunteeringOpportunitiesPageState
                   hintText: "Search",
                   prefixIcon: Icon(Icons.search),
                 ),
-              ), //search bar
+              ), //search bar--------------------------
               GestureDetector(
-                onTap: () {
-                  print("HI");
-                },
+                onTap: () => _showModalBottomSheet(context),
+                child: Container(
+                  margin: EdgeInsets.only(top: 15),
+                  width: 350,
+                  height: 170,
+                  child: Material(
+                    elevation: 3,
+                    color: Colors.white,
+                    shadowColor: Colors.black,
+                    borderRadius: BorderRadius.circular(20),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Container(
+                              margin: EdgeInsets.only(top: 30),
+                              child: Text(
+                                'Red Cross Sorsogon Chapter',
+                                style: TextStyle(
+                                    fontSize: 12, fontWeight: FontWeight.bold),
+                              ),
+                            ),
+                            Container(
+                              child: Text(
+                                'Emergency Services',
+                                style: TextStyle(fontSize: 12),
+                              ),
+                            ),
+                            Row(
+                              children: [
+                                Text(
+                                  'Difficulty: ',
+                                  style: TextStyle(
+                                      fontSize: 12,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                                Text(
+                                  'High',
+                                  style: TextStyle(
+                                      fontSize: 12, color: Colors.red),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                        Container(
+                          margin: EdgeInsets.only(top: 25),
+                          child: CircleAvatar(
+                            radius: 30,
+                            child: Text('Logo'),
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+              GestureDetector(
+                onTap: () => _showModalBottomSheet(context),
                 child: Container(
                   margin: EdgeInsets.only(top: 15),
                   width: 350,
@@ -60,9 +120,7 @@ class _VolunteeringOpportunitiesPageState
                 ),
               ),
               GestureDetector(
-                onTap: () {
-                  print("HI");
-                },
+                onTap: () => _showModalBottomSheet(context),
                 child: Container(
                   margin: EdgeInsets.only(top: 15),
                   width: 350,
@@ -77,26 +135,7 @@ class _VolunteeringOpportunitiesPageState
                 ),
               ),
               GestureDetector(
-                onTap: () {
-                  print("HI");
-                },
-                child: Container(
-                  margin: EdgeInsets.only(top: 15),
-                  width: 350,
-                  height: 170,
-                  child: Material(
-                    elevation: 3,
-                    color: Colors.white,
-                    shadowColor: Colors.black,
-                    borderRadius: BorderRadius.circular(20),
-                    child: Text('Mr Beast'),
-                  ),
-                ),
-              ),
-              GestureDetector(
-                onTap: () {
-                  print("HI");
-                },
+                onTap: () => _showModalBottomSheet(context),
                 child: Container(
                   margin: EdgeInsets.only(top: 15, bottom: 10),
                   width: 350,
@@ -116,4 +155,21 @@ class _VolunteeringOpportunitiesPageState
       ),
     );
   }
+}
+
+//---------------------------------------------------------
+void _showModalBottomSheet(BuildContext context) {
+  showModalBottomSheet(
+    context: context,
+    isScrollControlled: true,
+    builder: (context) => DraggableScrollableSheet(
+      expand: false,
+      initialChildSize: 0.7,
+      maxChildSize: 0.8,
+      minChildSize: 0.32,
+      builder: (context, scrollController) => const SingleChildScrollView(
+        child: OpportunitiesPage(),
+      ),
+    ),
+  );
 }
