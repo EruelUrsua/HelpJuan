@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "32936139717",
+    "project_id": "helpjuan-b70eb",
+    "storage_bucket": "helpjuan-b70eb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:32936139717:android:b47be7492b4f0fca0449ac",
+        "android_client_info": {
+          "package_name": "com.example.solutions_challenge_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "32936139717-s2oag3h33rgd40n3mddu8iamhj74k2uf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBULEL7GiiOXuogFdC52dR7uwWaN9vQQJk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "32936139717-s2oag3h33rgd40n3mddu8iamhj74k2uf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
