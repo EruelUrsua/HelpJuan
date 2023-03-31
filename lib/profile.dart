@@ -6,6 +6,17 @@ class Profile extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('HelpJuan'),
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(
+              Icons.settings,
+              color: Colors.white,
+            ),
+            onPressed: () {
+              // do something
+            },
+          )
+        ],
         elevation: 0,
         backgroundColor: const Color(0xFF89C0CC),
       ),
