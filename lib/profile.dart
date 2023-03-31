@@ -453,12 +453,16 @@ class _profileState extends State<profile> {
               Container(
                 margin: EdgeInsets.fromLTRB(20.0, 10.0, 0.0, 0.0),
                 child: Row(
-                  children: [
-                    PhysicalModel(
-                        color: Colors.white,
-                        elevation: 3,
-                        child: Container(width: 90, height: 90),
-                        shape: BoxShape.circle),
+                  children: <Widget>[
+                    // PhysicalModel(
+                    //     color: Colors.white,
+                    //     elevation: 3,
+                    //     child: Container(width: 90, height: 90),
+                    //     shape: BoxShape.circle),
+                    CircleAvatar(
+                      radius: 50,
+                      backgroundColor: Colors.white,
+                    )
                   ],
                 ),
               ),
