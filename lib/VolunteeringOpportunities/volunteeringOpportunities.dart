@@ -686,20 +686,3 @@ class _VolunteeringOpportunitiesPageState
     );
   }
 }
-
-//---------------------------------------------------------
-// void _showModalBottomSheet(BuildContext context) {
-//   showModalBottomSheet(
-//     context: context,
-//     isScrollControlled: true,
-//     builder: (context) => DraggableScrollableSheet(
-//       expand: false,
-//       initialChildSize: 0.7,
-//       maxChildSize: 0.8,
-//       minChildSize: 0.32,
-//       builder: (context, scrollController) => const SingleChildScrollView(
-//         child: OpportunitiesPage(),
-//       ),
-//     ),
-//   );
-// }

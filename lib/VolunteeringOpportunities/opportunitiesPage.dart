@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:solutions_challenge_app/VolunteeringOpportunities/volunteeringOpportunities.dart';
+import 'package:solutions_challenge_app/VolunteeringOpportunities/organizationPage.dart';
 
 class OpportunitiesPage extends StatefulWidget {
   const OpportunitiesPage({super.key});
@@ -12,17 +13,19 @@ class _OpportunitiesPageState extends State<OpportunitiesPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: PreferredSize(
-        preferredSize: Size.fromHeight(180),
-        child: AppBar(
-          backgroundColor: Color(0xFFCFCFCF),
-        ),
+      appBar: AppBar(
+        backgroundColor: Color(0xFFCFCFCF),
       ),
       body: Padding(
           padding: EdgeInsets.all(16),
           child: SingleChildScrollView(
             child: Column(
               children: [
+                Container(
+                  child: Placeholder(
+                    fallbackHeight: 120,
+                  ),
+                ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -97,7 +100,10 @@ class _OpportunitiesPageState extends State<OpportunitiesPage> {
                               fontFamily: 'Questrial',
                               color: Colors.white),
                         ),
-                        onPressed: () => Text('Hi'),
+                        onPressed: () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => OrganizationPage()));
+                        },
                       ),
                     ),
                     Row(
@@ -249,3 +255,20 @@ class _OpportunitiesPageState extends State<OpportunitiesPage> {
     );
   }
 }
+
+//---------------------------------------------------------
+// void _showModalBottomSheet(BuildContext context) {
+//   showModalBottomSheet(
+//     context: context,
+//     isScrollControlled: true,
+//     builder: (context) => DraggableScrollableSheet(
+//       expand: false,
+//       initialChildSize: 0.7,
+//       maxChildSize: 0.8,
+//       minChildSize: 0.32,
+//       builder: (context, scrollController) => const SingleChildScrollView(
+//         child: OpportunitiesPage(),
+//       ),
+//     ),
+//   );
+// }
