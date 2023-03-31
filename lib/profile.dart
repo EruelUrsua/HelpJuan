@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:solutions_challenge_app/VolunteeringOpportunities/organizationPage.dart';
 
 class profile extends StatefulWidget {
   const profile({super.key});
@@ -462,13 +463,23 @@ class _profileState extends State<profile> {
                       padding: EdgeInsets.all(10.0),
                       child: Column(
                         children: <Widget>[
-                          Material(
-                              child: CircleAvatar(
-                                radius: 30.0,
-                                backgroundColor: Colors.white,
-                              ),
-                              elevation: 3,
-                              shape: const CircleBorder(side: BorderSide.none)),
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => OrganizationPage()),
+                              );
+                            },
+                            child: Material(
+                                child: CircleAvatar(
+                                  radius: 30.0,
+                                  backgroundColor: Colors.white,
+                                ),
+                                elevation: 3,
+                                shape:
+                                    const CircleBorder(side: BorderSide.none)),
+                          ),
                           SizedBox(height: 6.0),
                           Text(
                             'logo', // name of org
