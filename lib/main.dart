@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'HelpMEEE',
       theme: ThemeData(
-        primarySwatch: Colors.teal,
+        appBarTheme: AppBarTheme(color: const Color(0xFF58A7B9)),
       ),
       home: test(),
     );

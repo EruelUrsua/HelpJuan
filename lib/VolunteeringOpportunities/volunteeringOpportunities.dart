@@ -44,7 +44,12 @@ class _VolunteeringOpportunitiesPageState
                 ),
               ), //search bar--------------------------
               GestureDetector(
-                onTap: () => _showModalBottomSheet(context),
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => OpportunitiesPage()));
+                },
                 child: Container(
                   margin: EdgeInsets.only(top: 15),
                   width: 350,
@@ -105,7 +110,12 @@ class _VolunteeringOpportunitiesPageState
                 ),
               ),
               GestureDetector(
-                onTap: () => _showModalBottomSheet(context),
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => OpportunitiesPage()));
+                },
                 child: Container(
                   margin: EdgeInsets.only(top: 15),
                   width: 350,
@@ -120,7 +130,12 @@ class _VolunteeringOpportunitiesPageState
                 ),
               ),
               GestureDetector(
-                onTap: () => _showModalBottomSheet(context),
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => OpportunitiesPage()));
+                },
                 child: Container(
                   margin: EdgeInsets.only(top: 15),
                   width: 350,
@@ -135,7 +150,12 @@ class _VolunteeringOpportunitiesPageState
                 ),
               ),
               GestureDetector(
-                onTap: () => _showModalBottomSheet(context),
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => OpportunitiesPage()));
+                },
                 child: Container(
                   margin: EdgeInsets.only(top: 15, bottom: 10),
                   width: 350,
@@ -158,18 +178,18 @@ class _VolunteeringOpportunitiesPageState
 }
 
 //---------------------------------------------------------
-void _showModalBottomSheet(BuildContext context) {
-  showModalBottomSheet(
-    context: context,
-    isScrollControlled: true,
-    builder: (context) => DraggableScrollableSheet(
-      expand: false,
-      initialChildSize: 0.7,
-      maxChildSize: 0.8,
-      minChildSize: 0.32,
-      builder: (context, scrollController) => const SingleChildScrollView(
-        child: OpportunitiesPage(),
-      ),
-    ),
-  );
-}
+// void _showModalBottomSheet(BuildContext context) {
+//   showModalBottomSheet(
+//     context: context,
+//     isScrollControlled: true,
+//     builder: (context) => DraggableScrollableSheet(
+//       expand: false,
+//       initialChildSize: 0.7,
+//       maxChildSize: 0.8,
+//       minChildSize: 0.32,
+//       builder: (context, scrollController) => const SingleChildScrollView(
+//         child: OpportunitiesPage(),
+//       ),
+//     ),
+//   );
+// }

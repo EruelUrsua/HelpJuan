@@ -23,29 +23,31 @@ class _NavState extends State<Nav> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: _widgetOptions.elementAt(_selectedIndex),
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed,
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Volunteer',
+        body: Center(
+          child: _widgetOptions.elementAt(_selectedIndex),
+        ),
+        bottomNavigationBar: new Theme(
+          data: Theme.of(context).copyWith(canvasColor: Color(0xFF58A7B9)),
+          child: BottomNavigationBar(
+            type: BottomNavigationBarType.fixed,
+            items: const <BottomNavigationBarItem>[
+              BottomNavigationBarItem(
+                icon: Icon(Icons.home),
+                label: 'Volunteer',
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.face),
+                label: 'Profile',
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.chat_bubble),
+                label: 'Chat',
+              ),
+            ],
+            currentIndex: _selectedIndex,
+            onTap: _onItemTap,
+            selectedItemColor: Colors.white,
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.face),
-            label: 'Profile',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.chat_bubble),
-            label: 'Chat',
-          ),
-        ],
-        currentIndex: _selectedIndex,
-        onTap: _onItemTap,
-        selectedItemColor: Colors.green,
-      ),
-    );
+        ));
   }
 }
