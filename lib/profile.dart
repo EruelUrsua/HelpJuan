@@ -44,7 +44,7 @@ class _profileState extends State<profile> {
                     Padding(
                       padding: const EdgeInsets.only(left: 25.0),
                       child: Text(
-                        'Welcome, Ysha!',
+                        'Welcome, Juan!',
                         style: TextStyle(
                           fontSize: 30,
                           fontWeight: FontWeight.bold,
