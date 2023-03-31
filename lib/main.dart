@@ -1,9 +1,13 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:solutions_challenge_app/Login/widget_tree.dart';
 import 'package:solutions_challenge_app/VolunteeringOpportunities/volunteeringOpportunities.dart';
 import 'package:solutions_challenge_app/profile.dart';
 import 'package:solutions_challenge_app/bnav.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 
@@ -15,21 +19,22 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'HelpMEEE',
+      title: 'HelpJuan',
       theme: ThemeData(
         appBarTheme: AppBarTheme(color: const Color(0xFF58A7B9)),
       ),
-      home: test(),
+      home:
+          WidgetTree(), //<------------------ change the class if you need to test
     );
   }
 }
 
-class test extends StatelessWidget {
-  const test({super.key});
+// class test extends StatelessWidget {
+//   const test({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return Nav();
-    // return Profile();
-  }
-}
+//   @override
+//   Widget build(BuildContext context) {
+//     return Nav();
+//     // return Profile();
+//   }
+// }

@@ -1,7 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:solutions_challenge_app/Backend/authentication_service.dart';
 import 'package:solutions_challenge_app/VolunteeringOpportunities/opportunitiesPage.dart';
 import 'package:solutions_challenge_app/bnav.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class VolunteeringOpportunitiesPage extends StatefulWidget {
   const VolunteeringOpportunitiesPage({super.key});
@@ -13,10 +15,24 @@ class VolunteeringOpportunitiesPage extends StatefulWidget {
 
 class _VolunteeringOpportunitiesPageState
     extends State<VolunteeringOpportunitiesPage> {
+  final auth = FirebaseAuth.instance;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(), // AppBar
+      appBar: AppBar(
+        centerTitle: true,
+        actions: <Widget>[
+          IconButton(
+              icon: Icon(
+                Icons.logout,
+                color: Colors.white,
+                size: 25,
+              ),
+              onPressed: () {
+                Authentication().signOut();
+              })
+        ],
+      ), // AppBar
       body: Padding(
         padding: EdgeInsets.all(16),
         child: SingleChildScrollView(
