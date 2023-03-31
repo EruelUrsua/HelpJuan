@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:solutions_challenge_app/VolunteeringOpportunities/volunteeringOpportunities.dart';
 import 'package:solutions_challenge_app/VolunteeringOpportunities/organizationPage.dart';
-import 'package:solutions_challenge_app/VolunteeringOpportunities/oppPageCancel.dart';
 
-class OpportunitiesPage extends StatefulWidget {
-  const OpportunitiesPage({super.key});
+class OppCancelPage extends StatefulWidget {
+  const OppCancelPage({super.key});
 
   @override
-  State<OpportunitiesPage> createState() => _OpportunitiesPageState();
+  State<OppCancelPage> createState() => _OppCancelPageState();
 }
 
-class _OpportunitiesPageState extends State<OpportunitiesPage> {
+class _OppCancelPageState extends State<OppCancelPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -80,26 +79,29 @@ class _OpportunitiesPageState extends State<OpportunitiesPage> {
                     Container(
                       alignment: Alignment.center,
                       margin: EdgeInsets.only(top: 40),
-                      child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(15)),
-                            minimumSize: Size(300, 45),
-                            textStyle: TextStyle(fontSize: 14),
-                            primary: Color(0xFFCC8989),
-                            onPrimary: Colors.white),
+                      child: OutlinedButton(
+                        style: OutlinedButton.styleFrom(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(15)),
+                          minimumSize: Size(300, 45),
+                          textStyle: TextStyle(fontSize: 14),
+                          primary: Color(0xFFCC8989),
+                          side: BorderSide(width: 2, color: Color(0xFFCC8989)),
+                          // onPrimary: Colors.white),
+                        ),
                         child: Text(
-                          'Volunteer',
+                          'Cancel Volunteer Opportunity',
                           style: TextStyle(
                               fontSize: 14,
                               fontWeight: FontWeight.bold,
                               fontFamily: 'Questrial',
-                              color: Colors.white),
+                              color: Color(0xFFCC8989)),
                         ),
-                        onPressed: () {
-                          Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => OppCancelPage()));
-                        },
+                        onPressed: () {},
+
+                        // Navigator.of(context).push(MaterialPageRoute(
+                        //     builder: (context) => OrganizationPage()));
+                        // },
                       ),
                     ),
                     Row(
