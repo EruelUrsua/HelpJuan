@@ -8,6 +8,7 @@ class profile extends StatefulWidget {
 }
 
 class _profileState extends State<profile> {
+  final List<String> items = List.generate(100, (index) => "Item $index");
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -316,15 +317,35 @@ class _profileState extends State<profile> {
 
 // --- Your organizations circle
               Container(
-                margin: EdgeInsets.fromLTRB(20.0, 10.0, 0.0, 0.0),
-                child: Row(
-                  children: [
-                    PhysicalModel(
-                        color: Colors.white,
-                        elevation: 3,
-                        child: Container(width: 90, height: 90),
-                        shape: BoxShape.circle),
-                  ],
+                height: 105.0,
+                child: ListView.builder(
+                  padding: EdgeInsets.only(left: 20.0),
+                  scrollDirection: Axis.horizontal,
+                  itemCount: items.length,
+                  itemBuilder: (BuildContext context, int index) {
+                    return Padding(
+                      padding: EdgeInsets.all(10.0),
+                      child: Column(
+                        children: <Widget>[
+                          Material(
+                              child: CircleAvatar(
+                                radius: 30.0,
+                                backgroundColor: Colors.white,
+                              ),
+                              elevation: 3,
+                              shape: const CircleBorder(side: BorderSide.none)),
+                          SizedBox(height: 6.0),
+                          Text(
+                            'logo', // name of org
+                            style: TextStyle(
+                              color: Colors.grey,
+                              fontSize: 15.0,
+                            ),
+                          ),
+                        ],
+                      ),
+                    );
+                  },
                 ),
               ),
             ], //stop here
