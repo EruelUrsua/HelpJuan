@@ -61,7 +61,7 @@ class _profileState extends State<profile> {
                         Padding(
                           padding: const EdgeInsets.only(left: 25.0),
                           child: Text(
-                            'Welcome, Juan!',
+                            'Welcome, Julia!',
                             style: TextStyle(
                               fontSize: 30,
                               fontWeight: FontWeight.bold,
@@ -78,43 +78,45 @@ class _profileState extends State<profile> {
                   Container(
                     color: const Color(0xFF58A7B9),
                     width: 550,
-                    height: MediaQuery.of(context).size.height * 0.035,
+                    height: MediaQuery.of(context).size.height * 0.110,
                     child: Row(
                       children: [
                         Padding(
-                          padding: const EdgeInsets.only(left: 26.0),
-                          child: Text(
-                            'Hours Volunteered',
-                            style: TextStyle(
-                              fontSize: 20,
-                              fontFamily: 'Questrial',
-                              color: Colors.white,
-                            ),
+                          padding:
+                              const EdgeInsets.only(left: 26.0, bottom: 10),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                'Hours Volunteered',
+                                style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Questrial',
+                                  color: Colors.white,
+                                ),
+                              ),
+                              SizedBox(height: 10),
+                              Text(
+                                '145h',
+                                style: TextStyle(
+                                  fontSize: 45,
+                                  fontWeight: FontWeight.bold,
+                                  fontFamily: 'Questrial',
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ],
                           ),
                         ),
-                      ],
-                    ),
-                  ),
-
-                  // --- total hours text
-                  Container(
-                    color: const Color(0xFF58A7B9),
-                    width: 550,
-                    height: MediaQuery.of(context).size.height * 0.070,
-                    child: Row(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.only(left: 26.0),
-                          child: Text(
-                            '145h',
-                            style: TextStyle(
-                              fontSize: 40,
-                              fontWeight: FontWeight.bold,
-                              fontFamily: 'Questrial',
-                              color: Colors.white,
-                            ),
-                          ),
+                        Spacer(),
+                        CircleAvatar(
+                          radius: 40,
+                          backgroundColor: Colors.blue,
+                          child: Image.asset('assets/images/UserX.png',
+                              fit: BoxFit.contain),
                         ),
+                        SizedBox(width: 50),
                       ],
                     ),
                   ),
@@ -123,7 +125,7 @@ class _profileState extends State<profile> {
 
 // Your opportunity text
               Container(
-                margin: EdgeInsets.fromLTRB(20.0, 20, 0.0, 0.0),
+                margin: EdgeInsets.fromLTRB(20.0, 15, 0.0, 0.0),
                 child: Text(
                   'Your Opportunity',
                   style: TextStyle(
