@@ -11,6 +11,14 @@ class profile extends StatefulWidget {
 
 class _profileState extends State<profile> {
   final List<String> items = List.generate(5, (index) => "Item $index");
+  final List<String> name = [
+    'Red Alert',
+    'Safety Check',
+    'Bayanihan',
+    'Red Alert',
+    'Safety Check'
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -45,7 +53,7 @@ class _profileState extends State<profile> {
                     Padding(
                       padding: const EdgeInsets.only(left: 25.0),
                       child: Text(
-                        'Welcome, Ysha!',
+                        'Welcome, Juan!',
                         style: TextStyle(
                           fontSize: 30,
                           fontWeight: FontWeight.bold,
@@ -534,7 +542,7 @@ class _profileState extends State<profile> {
                           ),
                           SizedBox(height: 6.0),
                           Text(
-                            'logo', // name of org
+                            name[index], // name of org
                             style: TextStyle(
                               color: Colors.grey,
                               fontSize: 15.0,
