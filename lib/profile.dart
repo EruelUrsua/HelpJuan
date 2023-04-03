@@ -18,18 +18,22 @@ class _profileState extends State<profile> {
     'Red Alert',
     'Safety Check'
   ];
+  final List<String> logo = [
+    'assets/images/RedOne.png',
+    'assets/images/SafetyOne.png',
+    'assets/images/BayanihanOne.png',
+    'assets/images/RedOne.png',
+    'assets/images/SafetyOne.png'
+  ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('HelpJuan'),
+        title: Image.asset('assets/images/name.png'),
         actions: <Widget>[
           IconButton(
-            icon: Icon(
-              Icons.settings,
-              color: Colors.white,
-            ),
+            icon: Image.asset('assets/images/Settings.png'),
             onPressed: () {
               // do something
             },
@@ -167,6 +171,8 @@ class _profileState extends State<profile> {
                         CircleAvatar(
                           radius: 40,
                           backgroundColor: Colors.blue,
+                          child: Image.asset('assets/images/RedAlert.png',
+                              fit: BoxFit.contain),
                         ),
                         SizedBox(width: 20),
                         Column(
@@ -358,6 +364,9 @@ class _profileState extends State<profile> {
                                     CircleAvatar(
                                       radius: 40,
                                       backgroundColor: Colors.blue,
+                                      child: Image.asset(
+                                          'assets/images/RedAlert.png',
+                                          fit: BoxFit.contain),
                                     ),
                                     SizedBox(width: 20),
                                     Column(
@@ -551,6 +560,8 @@ class _profileState extends State<profile> {
                                 child: CircleAvatar(
                                   radius: 35.0,
                                   backgroundColor: Colors.white,
+                                  child: Image.asset(logo[index],
+                                      fit: BoxFit.contain),
                                 ),
                                 elevation: 3,
                                 shape:
