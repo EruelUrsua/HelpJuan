@@ -43,72 +43,78 @@ class _profileState extends State<profile> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-// --- Welcome text + bg
-              Container(
-                color: const Color(0xFF58A7B9),
-                width: 550,
-                height: MediaQuery.of(context).size.height * 0.035,
-                child: Row(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(left: 25.0),
-                      child: Text(
-                        'Welcome, Juan!',
-                        style: TextStyle(
-                          fontSize: 30,
-                          fontWeight: FontWeight.bold,
-                          fontFamily: 'Questrial',
-                          color: Colors.white,
+              Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  // --- Welcome text
+                  Container(
+                    color: const Color(0xFF58A7B9),
+                    width: 550,
+                    height: MediaQuery.of(context).size.height * 0.035,
+                    child: Row(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(left: 25.0),
+                          child: Text(
+                            'Welcome, Juan!',
+                            style: TextStyle(
+                              fontSize: 30,
+                              fontWeight: FontWeight.bold,
+                              fontFamily: 'Questrial',
+                              color: Colors.white,
+                            ),
+                          ),
                         ),
-                      ),
+                      ],
                     ),
-                  ],
-                ),
-              ),
+                  ),
 
-// --- Hours Volunteered text + bg
-              Container(
-                color: const Color(0xFF58A7B9),
-                width: 550,
-                height: 50,
-                child: Row(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(left: 26.0),
-                      child: Text(
-                        'Hours Volunteered',
-                        style: TextStyle(
-                          fontSize: 20,
-                          fontFamily: 'Questrial',
-                          color: Colors.white,
+                  // --- Hours Volunteered text
+                  Container(
+                    color: const Color(0xFF58A7B9),
+                    width: 550,
+                    height: MediaQuery.of(context).size.height * 0.035,
+                    child: Row(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(left: 26.0),
+                          child: Text(
+                            'Hours Volunteered',
+                            style: TextStyle(
+                              fontSize: 20,
+                              fontFamily: 'Questrial',
+                              color: Colors.white,
+                            ),
+                          ),
                         ),
-                      ),
+                      ],
                     ),
-                  ],
-                ),
-              ),
+                  ),
 
-// time text + bg
-              Container(
-                color: const Color(0xFF58A7B9),
-                width: 550,
-                height: 50,
-                child: Row(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(left: 26.0),
-                      child: Text(
-                        '145h',
-                        style: TextStyle(
-                          fontSize: 40,
-                          fontWeight: FontWeight.bold,
-                          fontFamily: 'Questrial',
-                          color: Colors.white,
+                  // --- total hours text
+                  Container(
+                    color: const Color(0xFF58A7B9),
+                    width: 550,
+                    height: MediaQuery.of(context).size.height * 0.070,
+                    child: Row(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(left: 26.0),
+                          child: Text(
+                            '145h',
+                            style: TextStyle(
+                              fontSize: 40,
+                              fontWeight: FontWeight.bold,
+                              fontFamily: 'Questrial',
+                              color: Colors.white,
+                            ),
+                          ),
                         ),
-                      ),
+                      ],
                     ),
-                  ],
-                ),
+                  ),
+                ], // stop here
               ),
 
 // Your opportunity text
@@ -158,6 +164,11 @@ class _profileState extends State<profile> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
+                        CircleAvatar(
+                          radius: 40,
+                          backgroundColor: Colors.blue,
+                        ),
+                        SizedBox(width: 20),
                         Column(
                           mainAxisAlignment: MainAxisAlignment.start,
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -344,6 +355,11 @@ class _profileState extends State<profile> {
                                 child: Row(
                                   mainAxisAlignment: MainAxisAlignment.end,
                                   children: [
+                                    CircleAvatar(
+                                      radius: 40,
+                                      backgroundColor: Colors.blue,
+                                    ),
+                                    SizedBox(width: 20),
                                     Column(
                                       mainAxisAlignment:
                                           MainAxisAlignment.start,
