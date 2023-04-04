@@ -12,16 +12,16 @@ class _chatPageState extends State<chatPage> {
   final List<String> items = List.generate(5, (index) => "Item $index");
   final List<String> name = [
     'Red Alert',
-    'Safety Check',
-    'Bayanihan',
-    'Red Alert',
+    'Mike',
+    'Maria',
+    'Joe',
     'Safety Check'
   ];
   final List<String> logo = [
     'assets/images/RedOne.png',
-    'assets/images/SafetyOne.png',
-    'assets/images/BayanihanOne.png',
-    'assets/images/RedOne.png',
+    'assets/images/MikeOne.png',
+    'assets/images/Maria.png',
+    'assets/images/Joe.png',
     'assets/images/SafetyOne.png'
   ];
 
@@ -38,13 +38,14 @@ class _chatPageState extends State<chatPage> {
           child: Column(
             children: [
               Container(
-                margin: EdgeInsets.only(top: 20),
+                margin: EdgeInsets.fromLTRB(20.0, 15, 0.0, 0.0),
+                alignment: Alignment.topLeft,
                 child: Text(
-                  'Organizations',
+                  'MESSAGES',
                   style: TextStyle(
-                    fontSize: 18,
+                    fontSize: 20,
+                    color: const Color(0xFF58A7B9),
                     fontWeight: FontWeight.bold,
-                    color: Colors.black,
                     fontFamily: 'Questrial',
                   ),
                 ),
@@ -73,7 +74,7 @@ class _chatPageState extends State<chatPage> {
                               child: Container(
                                 child: Material(
                                     child: CircleAvatar(
-                                      radius: 30.0,
+                                      radius: 35.0,
                                       backgroundColor: Colors.white,
                                       child: Image.asset(logo[index],
                                           fit: BoxFit.contain),
@@ -140,9 +141,9 @@ class _chatPageState extends State<chatPage> {
                                       margin:
                                           EdgeInsets.only(top: 30, left: 15),
                                       child: Text(
-                                        'Red Alert Local Chapter',
+                                        'Red Alert Volunteers',
                                         style: TextStyle(
-                                            fontSize: 12,
+                                            fontSize: 15,
                                             fontWeight: FontWeight.bold,
                                             fontFamily: 'Questrial',
                                             color: const Color(0xFF6E7191)),
@@ -153,7 +154,7 @@ class _chatPageState extends State<chatPage> {
                                       child: Text(
                                         "You: Let's do this!",
                                         style: TextStyle(
-                                            fontSize: 12,
+                                            fontSize: 13,
                                             fontFamily: 'Questrial',
                                             color: const Color(0xFF6E7191)),
                                       ),

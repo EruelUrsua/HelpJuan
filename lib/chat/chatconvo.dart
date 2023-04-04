@@ -30,7 +30,7 @@ class _chatConvoPageState extends State<chatConvoPage> {
                 Container(
                   margin: EdgeInsets.only(left: 10),
                   child: Text(
-                    'Red Alert Local Chapter',
+                    'Red Alert Volunteers',
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 13.0,
@@ -40,7 +40,7 @@ class _chatConvoPageState extends State<chatConvoPage> {
                 Container(
                   margin: EdgeInsets.only(left: 10, top: 2),
                   child: Text(
-                    '7 online, form 12 people',
+                    '7 Online, from 12 people',
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 10.0,
