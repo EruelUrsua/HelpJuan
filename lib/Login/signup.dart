@@ -40,10 +40,6 @@ class _LoginPageState extends State<LoginPage> {
     }
   }
 
-  Widget _title() {
-    return const Text('Help Juan');
-  }
-
   Widget _entryField(
     String title,
     TextEditingController controller,
@@ -82,9 +78,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: _title(),
-      ),
+      appBar: null,
       body: Container(
         height: double.infinity,
         width: double.infinity,

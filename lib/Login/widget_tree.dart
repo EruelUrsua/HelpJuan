@@ -4,6 +4,8 @@ import 'package:solutions_challenge_app/Backend/home_page.dart';
 import 'package:solutions_challenge_app/bnav.dart';
 import 'signup.dart';
 import 'package:flutter/material.dart';
+import 'package:solutions_challenge_app/Login/login.dart';
+import 'package:solutions_challenge_app/Login/register.dart';
 
 class WidgetTree extends StatefulWidget {
   const WidgetTree({super.key});
@@ -21,7 +23,7 @@ class _WidgetTreeState extends State<WidgetTree> {
         if (snapshot.hasData) {
           return Nav();
         } else {
-          return const LoginPage();
+          return const Register();
         }
       },
     );
