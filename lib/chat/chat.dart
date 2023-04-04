@@ -29,6 +29,7 @@ class _chatPageState extends State<chatPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        title: Image.asset('assets/images/name.png'),
         automaticallyImplyLeading: false,
       ),
       body: Padding(

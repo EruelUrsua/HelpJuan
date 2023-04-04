@@ -44,7 +44,7 @@ class _RegisterState extends State<Register> {
                   Container(
                     margin: EdgeInsets.only(top: 1),
                     child: Text(
-                      'Lorem Ipsum',
+                      '',
                       style: TextStyle(
                         fontSize: 14,
                         color: Color(0xFF6E7191),
