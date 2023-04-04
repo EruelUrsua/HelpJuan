@@ -208,7 +208,7 @@ class _OpportunitiesPageState extends State<OpportunitiesPage> {
                         margin: EdgeInsets.only(top: 10, left: 14),
                         alignment: Alignment.centerLeft,
                         child: Text(
-                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
+                          'As a volunteer, you will be providing on-scene patient care and treatment, and assist transporting patients to medical facilities. ',
                           style: TextStyle(
                               height: 1.5,
                               fontSize: 14,
@@ -232,7 +232,7 @@ class _OpportunitiesPageState extends State<OpportunitiesPage> {
                         margin: EdgeInsets.only(top: 10, left: 14),
                         alignment: Alignment.centerLeft,
                         child: Text(
-                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
+                          'Chat with your fellow volunteers below. Get to know, ask questions, or verify details.',
                           style: TextStyle(
                               fontSize: 14,
                               fontFamily: 'Questrial',
