@@ -15,6 +15,24 @@ class VolunteeringOpportunitiesPage extends StatefulWidget {
 
 class _VolunteeringOpportunitiesPageState
     extends State<VolunteeringOpportunitiesPage> {
+  final int index1 = 0;
+  final int index2 = 0;
+  final List<String> items = List.generate(5, (index) => "Item $index");
+  final List<String> name = [
+    'Red Alert',
+    'Safety Check',
+    'Bayanihan',
+    'Red Alert',
+    'Safety Check'
+  ];
+  final List<String> logo = [
+    'assets/images/RedOne.png',
+    'assets/images/SafetyOne.png',
+    'assets/images/BayanihanOne.png',
+    'assets/images/RedOne.png',
+    'assets/images/SafetyOne.png'
+  ];
+
   final auth = FirebaseAuth.instance;
   @override
   Widget build(BuildContext context) {
@@ -86,7 +104,7 @@ class _VolunteeringOpportunitiesPageState
                               Container(
                                 margin: EdgeInsets.only(top: 20, left: 15),
                                 child: Text(
-                                  'Red Cross Sorsogon Chapter',
+                                  'Red Alert Local Chapter',
                                   style: TextStyle(
                                       fontSize: 12,
                                       fontWeight: FontWeight.bold,
@@ -194,6 +212,10 @@ class _VolunteeringOpportunitiesPageState
                                 margin: EdgeInsets.only(top: 20, left: 70),
                                 child: CircleAvatar(
                                   radius: 30,
+                                  backgroundColor: Colors.white,
+                                  child: Image.asset(
+                                      'assets/images/RedAlert.png',
+                                      fit: BoxFit.contain),
                                 ),
                               ),
                               Container(
@@ -241,7 +263,7 @@ class _VolunteeringOpportunitiesPageState
                               Container(
                                 margin: EdgeInsets.only(top: 20, left: 15),
                                 child: Text(
-                                  'Red Cross Sorsogon Chapter',
+                                  'Bayanihan Local Chapter',
                                   style: TextStyle(
                                       fontSize: 12,
                                       fontWeight: FontWeight.bold,
@@ -346,13 +368,16 @@ class _VolunteeringOpportunitiesPageState
                           Column(
                             children: [
                               Container(
-                                margin: EdgeInsets.only(top: 20, left: 70),
+                                margin: EdgeInsets.only(top: 20, left: 60),
                                 child: CircleAvatar(
-                                  radius: 30,
-                                ),
+                                    radius: 40,
+                                    backgroundColor: Colors.white,
+                                    child: Image.asset(
+                                        'assets/images/BayanihanOne.png',
+                                        fit: BoxFit.contain)),
                               ),
                               Container(
-                                margin: EdgeInsets.only(top: 65, left: 70),
+                                margin: EdgeInsets.only(top: 45, left: 60),
                                 child: Text(
                                   '5 spots left',
                                   style: TextStyle(
@@ -396,7 +421,7 @@ class _VolunteeringOpportunitiesPageState
                               Container(
                                 margin: EdgeInsets.only(top: 20, left: 15),
                                 child: Text(
-                                  'Red Cross Sorsogon Chapter',
+                                  'Safety Check Local Chapter',
                                   style: TextStyle(
                                       fontSize: 12,
                                       fontWeight: FontWeight.bold,
@@ -501,13 +526,16 @@ class _VolunteeringOpportunitiesPageState
                           Column(
                             children: [
                               Container(
-                                margin: EdgeInsets.only(top: 20, left: 70),
+                                margin: EdgeInsets.only(top: 20, left: 60),
                                 child: CircleAvatar(
-                                  radius: 30,
-                                ),
+                                    radius: 40,
+                                    backgroundColor: Colors.white,
+                                    child: Image.asset(
+                                        'assets/images/SafetyOne.png',
+                                        fit: BoxFit.contain)),
                               ),
                               Container(
-                                margin: EdgeInsets.only(top: 65, left: 70),
+                                margin: EdgeInsets.only(top: 45, left: 60),
                                 child: Text(
                                   '5 spots left',
                                   style: TextStyle(
@@ -532,7 +560,7 @@ class _VolunteeringOpportunitiesPageState
                           builder: (context) => OpportunitiesPage()));
                 },
                 child: Container(
-                  margin: EdgeInsets.only(top: 15),
+                  margin: EdgeInsets.only(top: 15, bottom: 10),
                   width: 350,
                   height: 170,
                   child: Material(
@@ -551,7 +579,7 @@ class _VolunteeringOpportunitiesPageState
                               Container(
                                 margin: EdgeInsets.only(top: 20, left: 15),
                                 child: Text(
-                                  'Red Cross Sorsogon Chapter',
+                                  'Red Alert Local Chapter',
                                   style: TextStyle(
                                       fontSize: 12,
                                       fontWeight: FontWeight.bold,
@@ -659,6 +687,10 @@ class _VolunteeringOpportunitiesPageState
                                 margin: EdgeInsets.only(top: 20, left: 70),
                                 child: CircleAvatar(
                                   radius: 30,
+                                  backgroundColor: Colors.white,
+                                  child: Image.asset(
+                                      'assets/images/RedAlert.png',
+                                      fit: BoxFit.contain),
                                 ),
                               ),
                               Container(
