@@ -127,7 +127,7 @@ class _VolunteeringOpportunitiesPageState
                                         style: TextStyle(
                                             fontSize: 12,
                                             fontFamily: 'Questrial',
-                                            color: Color(0xFFCC8989)),
+                                            color: Color(0xFFBE5757)),
                                       ),
                                     )
                                   ],
@@ -210,7 +210,7 @@ class _VolunteeringOpportunitiesPageState
                                     style: TextStyle(
                                         fontSize: 12,
                                         fontFamily: 'Questrial',
-                                        color: const Color(0xFFCC8989)),
+                                        color: const Color(0xFFBE5757)),
                                   ),
                                 ),
                               ],
@@ -286,7 +286,7 @@ class _VolunteeringOpportunitiesPageState
                                         style: TextStyle(
                                             fontSize: 12,
                                             fontFamily: 'Questrial',
-                                            color: Color(0xFFCC8989)),
+                                            color: Color(0xFFBE5757)),
                                       ),
                                     )
                                   ],
@@ -368,7 +368,7 @@ class _VolunteeringOpportunitiesPageState
                                     style: TextStyle(
                                         fontSize: 12,
                                         fontFamily: 'Questrial',
-                                        color: const Color(0xFFCC8989)),
+                                        color: const Color(0xFFBE5757)),
                                   ),
                                 ),
                               ],
@@ -444,7 +444,7 @@ class _VolunteeringOpportunitiesPageState
                                         style: TextStyle(
                                             fontSize: 12,
                                             fontFamily: 'Questrial',
-                                            color: Color(0xFFCC8989)),
+                                            color: Color(0xFFBE5757)),
                                       ),
                                     )
                                   ],
@@ -526,7 +526,7 @@ class _VolunteeringOpportunitiesPageState
                                     style: TextStyle(
                                         fontSize: 12,
                                         fontFamily: 'Questrial',
-                                        color: const Color(0xFFCC8989)),
+                                        color: const Color(0xFFBE5757)),
                                   ),
                                 ),
                               ],
@@ -602,7 +602,7 @@ class _VolunteeringOpportunitiesPageState
                                         style: TextStyle(
                                             fontSize: 12,
                                             fontFamily: 'Questrial',
-                                            color: Color(0xFFCC8989)),
+                                            color: Color(0xFFBE5757)),
                                       ),
                                     )
                                   ],
@@ -685,7 +685,7 @@ class _VolunteeringOpportunitiesPageState
                                     style: TextStyle(
                                         fontSize: 12,
                                         fontFamily: 'Questrial',
-                                        color: const Color(0xFFCC8989)),
+                                        color: const Color(0xFFBE5757)),
                                   ),
                                 ),
                               ],

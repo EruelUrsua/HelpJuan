@@ -17,7 +17,7 @@ class _OpportunitiesPageState extends State<OpportunitiesPage> {
     return LayoutBuilder(builder: (context, constraints) {
       return Scaffold(
         appBar: AppBar(
-          backgroundColor: Color(0xFFCFCFCF),
+          backgroundColor: Color(0xFF0079BD),
         ),
         body: Padding(
             padding: EdgeInsets.all(16),
@@ -101,7 +101,7 @@ class _OpportunitiesPageState extends State<OpportunitiesPage> {
                                   borderRadius: BorderRadius.circular(15)),
                               minimumSize: Size(300, 45),
                               textStyle: TextStyle(fontSize: 14),
-                              primary: Color(0xFFCC8989),
+                              primary: Color(0xFFBE5757),
                               onPrimary: Colors.white),
                           child: Text(
                             'Volunteer',
@@ -187,7 +187,7 @@ class _OpportunitiesPageState extends State<OpportunitiesPage> {
                               style: TextStyle(
                                   fontSize: 12,
                                   fontFamily: 'Questrial',
-                                  color: const Color(0xFFCC8989)),
+                                  color: const Color(0xFFBE5757)),
                             ),
                           )
                         ],
@@ -252,10 +252,10 @@ class _OpportunitiesPageState extends State<OpportunitiesPage> {
                               hintText: "Write a message...",
                               hintStyle: TextStyle(
                                 fontSize: 16,
-                                color: Color(0xFF58A7B9),
+                                color: Color(0xFF0079BD),
                               ),
                               prefixIcon: Icon(Icons.send),
-                              prefixIconColor: Color(0xFF58A7B9)),
+                              prefixIconColor: Color(0xFF0079BD)),
                           onTap: () {
                             Navigator.push(
                               context,

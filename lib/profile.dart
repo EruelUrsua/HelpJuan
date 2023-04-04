@@ -43,7 +43,7 @@ class _profileState extends State<profile> {
           ],
           automaticallyImplyLeading: false,
           elevation: 0,
-          backgroundColor: const Color(0xFF58A7B9),
+          backgroundColor: const Color(0xFF0079BD),
         ),
         body: SafeArea(
           child: SingleChildScrollView(
@@ -56,7 +56,7 @@ class _profileState extends State<profile> {
                   children: [
                     // --- Welcome text
                     Container(
-                      color: const Color(0xFF58A7B9),
+                      color: const Color(0xFF0079BD),
                       width: 550,
                       height: MediaQuery.of(context).size.height * 0.035,
                       child: Row(
@@ -79,14 +79,14 @@ class _profileState extends State<profile> {
 
                     // --- Hours Volunteered text
                     Container(
-                      color: const Color(0xFF58A7B9),
+                      color: const Color(0xFF0079BD),
                       width: 550,
                       height: MediaQuery.of(context).size.height * 0.110,
                       child: Row(
                         children: [
                           Padding(
                             padding:
-                                const EdgeInsets.only(left: 26.0, bottom: 2),
+                                const EdgeInsets.only(left: 26.0, bottom: 0.5),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               mainAxisAlignment: MainAxisAlignment.center,
@@ -103,7 +103,7 @@ class _profileState extends State<profile> {
                                 Text(
                                   '145h',
                                   style: TextStyle(
-                                    fontSize: 45,
+                                    fontSize: 43,
                                     fontWeight: FontWeight.bold,
                                     fontFamily: 'Questrial',
                                     color: Colors.white,

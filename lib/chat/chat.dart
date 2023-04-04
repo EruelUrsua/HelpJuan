@@ -44,7 +44,7 @@ class _chatPageState extends State<chatPage> {
                   'MESSAGES',
                   style: TextStyle(
                     fontSize: 20,
-                    color: const Color(0xFF58A7B9),
+                    color: const Color(0xFF0079BD),
                     fontWeight: FontWeight.bold,
                     fontFamily: 'Questrial',
                   ),

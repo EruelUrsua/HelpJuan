@@ -15,7 +15,7 @@ class _LoginState extends State<Login> {
   Widget build(BuildContext context) {
     return LayoutBuilder(builder: (context, constraints) {
       return Scaffold(
-        backgroundColor: Color(0xFF58A7B9),
+        backgroundColor: Color(0xFF0079BD),
         appBar: null,
         body: Padding(
           padding: const EdgeInsets.all(16.0),
@@ -105,7 +105,7 @@ class _LoginState extends State<Login> {
                               fontSize: 14,
                               fontWeight: FontWeight.bold,
                               fontFamily: 'Questrial',
-                              color: Color(0xFF58A7B9)),
+                              color: Color(0xFF0079BD)),
                         ),
                         onPressed: () {
                           Navigator.push(context,

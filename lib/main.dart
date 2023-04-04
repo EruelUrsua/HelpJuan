@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'HelpJuan',
       theme: ThemeData(
-        appBarTheme: AppBarTheme(color: const Color(0xFF58A7B9)),
+        appBarTheme: AppBarTheme(color: const Color(0xFF0079BD)),
       ),
       home:
           WidgetTree(), //<------------------ change the class if you need to test
