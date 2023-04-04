@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:solutions_challenge_app/chat/chatconvo.dart';
 
 class chatPage extends StatefulWidget {
   const chatPage({super.key});
@@ -43,7 +44,7 @@ class _chatPageState extends State<chatPage> {
                 ),
               ),
             ),
-            Container(
+            SizedBox(
               height: 115.0,
               child: ListView.builder(
                 padding: EdgeInsets.only(left: 15.0),
@@ -60,7 +61,7 @@ class _chatPageState extends State<chatPage> {
                             // Navigator.push(
                             //   context,
                             //   MaterialPageRoute(
-                            //       builder: (context) => OrganizationPage()),
+                            //       builder: (context) => chatConvoPage()),
                             // );
                           },
                           child: Material(
@@ -91,10 +92,8 @@ class _chatPageState extends State<chatPage> {
               padding: const EdgeInsets.only(left: 16.0, right: 16),
               child: GestureDetector(
                 onTap: () {
-                  // Navigator.push(
-                  //     context,
-                  //     MaterialPageRoute(
-                  //         builder: (context) => OpportunitiesPage()));
+                  // Navigator.push(context,
+                  //     MaterialPageRoute(builder: (context) => chatConvoPage()));
                 },
                 child: Container(
                   margin: EdgeInsets.only(top: 15),
@@ -148,9 +147,9 @@ class _chatPageState extends State<chatPage> {
                                   ),
                                 ],
                               ),
-                              Column(
-                                children: [],
-                              )
+                              // Column(
+                              //   children: [],
+                              // )
                             ],
                           ),
                         ],
