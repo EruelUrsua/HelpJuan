@@ -137,19 +137,19 @@ class _VolunteeringOpportunitiesPageState
                                     Row(
                                       children: [
                                         Container(
-                                          margin: EdgeInsets.only(
-                                              top: 15, left: 15),
-                                          child: InkWell(
-                                            child: Container(
-                                              width: 20,
-                                              height: 20,
-                                              color: Color(0xFFD9D9D9),
-                                            ),
+                                          margin:
+                                              EdgeInsets.only(top: 7, left: 5),
+                                          child: CircleAvatar(
+                                            radius: 20,
+                                            backgroundColor: Colors.white,
+                                            child: Image.asset(
+                                                'assets/images/material-symbols_location-on.png',
+                                                fit: BoxFit.contain),
                                           ),
                                         ),
                                         Container(
                                           margin:
-                                              EdgeInsets.only(top: 15, left: 5),
+                                              EdgeInsets.only(top: 10, left: 5),
                                           child: Text(
                                             'Location',
                                             style: TextStyle(
@@ -164,18 +164,18 @@ class _VolunteeringOpportunitiesPageState
                                       children: [
                                         Container(
                                           margin:
-                                              EdgeInsets.only(top: 5, left: 15),
-                                          child: InkWell(
-                                            child: Container(
-                                              width: 20,
-                                              height: 20,
-                                              color: Color(0xFFD9D9D9),
-                                            ),
+                                              EdgeInsets.only(top: 5, left: 5),
+                                          child: CircleAvatar(
+                                            radius: 20,
+                                            backgroundColor: Colors.white,
+                                            child: Image.asset(
+                                                'assets/images/tabler_calendar-exclamation.png',
+                                                fit: BoxFit.contain),
                                           ),
                                         ),
                                         Container(
                                           margin:
-                                              EdgeInsets.only(top: 5, left: 5),
+                                              EdgeInsets.only(top: 5, left: 4),
                                           child: Text(
                                             '11PM - 5AM Oct 25, 2022',
                                             style: TextStyle(
@@ -296,19 +296,19 @@ class _VolunteeringOpportunitiesPageState
                                     Row(
                                       children: [
                                         Container(
-                                          margin: EdgeInsets.only(
-                                              top: 15, left: 15),
-                                          child: InkWell(
-                                            child: Container(
-                                              width: 20,
-                                              height: 20,
-                                              color: Color(0xFFD9D9D9),
-                                            ),
+                                          margin:
+                                              EdgeInsets.only(top: 7, left: 5),
+                                          child: CircleAvatar(
+                                            radius: 20,
+                                            backgroundColor: Colors.white,
+                                            child: Image.asset(
+                                                'assets/images/material-symbols_location-on.png',
+                                                fit: BoxFit.contain),
                                           ),
                                         ),
                                         Container(
                                           margin:
-                                              EdgeInsets.only(top: 15, left: 5),
+                                              EdgeInsets.only(top: 10, left: 5),
                                           child: Text(
                                             'Location',
                                             style: TextStyle(
@@ -323,18 +323,18 @@ class _VolunteeringOpportunitiesPageState
                                       children: [
                                         Container(
                                           margin:
-                                              EdgeInsets.only(top: 5, left: 15),
-                                          child: InkWell(
-                                            child: Container(
-                                              width: 20,
-                                              height: 20,
-                                              color: Color(0xFFD9D9D9),
-                                            ),
+                                              EdgeInsets.only(top: 5, left: 4),
+                                          child: CircleAvatar(
+                                            radius: 20,
+                                            backgroundColor: Colors.white,
+                                            child: Image.asset(
+                                                'assets/images/tabler_calendar-exclamation.png',
+                                                fit: BoxFit.contain),
                                           ),
                                         ),
                                         Container(
                                           margin:
-                                              EdgeInsets.only(top: 5, left: 5),
+                                              EdgeInsets.only(top: 5, left: 4),
                                           child: Text(
                                             '11PM - 5AM Oct 25, 2022',
                                             style: TextStyle(
@@ -454,19 +454,19 @@ class _VolunteeringOpportunitiesPageState
                                     Row(
                                       children: [
                                         Container(
-                                          margin: EdgeInsets.only(
-                                              top: 15, left: 15),
-                                          child: InkWell(
-                                            child: Container(
-                                              width: 20,
-                                              height: 20,
-                                              color: Color(0xFFD9D9D9),
-                                            ),
+                                          margin:
+                                              EdgeInsets.only(top: 7, left: 5),
+                                          child: CircleAvatar(
+                                            radius: 20,
+                                            backgroundColor: Colors.white,
+                                            child: Image.asset(
+                                                'assets/images/material-symbols_location-on.png',
+                                                fit: BoxFit.contain),
                                           ),
                                         ),
                                         Container(
                                           margin:
-                                              EdgeInsets.only(top: 15, left: 5),
+                                              EdgeInsets.only(top: 10, left: 5),
                                           child: Text(
                                             'Location',
                                             style: TextStyle(
@@ -481,13 +481,13 @@ class _VolunteeringOpportunitiesPageState
                                       children: [
                                         Container(
                                           margin:
-                                              EdgeInsets.only(top: 5, left: 15),
-                                          child: InkWell(
-                                            child: Container(
-                                              width: 20,
-                                              height: 20,
-                                              color: Color(0xFFD9D9D9),
-                                            ),
+                                              EdgeInsets.only(top: 5, left: 4),
+                                          child: CircleAvatar(
+                                            radius: 20,
+                                            backgroundColor: Colors.white,
+                                            child: Image.asset(
+                                                'assets/images/tabler_calendar-exclamation.png',
+                                                fit: BoxFit.contain),
                                           ),
                                         ),
                                         Container(
@@ -612,19 +612,19 @@ class _VolunteeringOpportunitiesPageState
                                     Row(
                                       children: [
                                         Container(
-                                          margin: EdgeInsets.only(
-                                              top: 15, left: 15),
-                                          child: InkWell(
-                                            child: Container(
-                                              width: 20,
-                                              height: 20,
-                                              color: Color(0xFFD9D9D9),
-                                            ),
+                                          margin:
+                                              EdgeInsets.only(top: 7, left: 5),
+                                          child: CircleAvatar(
+                                            radius: 20,
+                                            backgroundColor: Colors.white,
+                                            child: Image.asset(
+                                                'assets/images/material-symbols_location-on.png',
+                                                fit: BoxFit.contain),
                                           ),
                                         ),
                                         Container(
                                           margin:
-                                              EdgeInsets.only(top: 15, left: 5),
+                                              EdgeInsets.only(top: 10, left: 5),
                                           child: Text(
                                             'Location',
                                             style: TextStyle(
@@ -639,13 +639,13 @@ class _VolunteeringOpportunitiesPageState
                                       children: [
                                         Container(
                                           margin:
-                                              EdgeInsets.only(top: 5, left: 15),
-                                          child: InkWell(
-                                            child: Container(
-                                              width: 20,
-                                              height: 20,
-                                              color: Color(0xFFD9D9D9),
-                                            ),
+                                              EdgeInsets.only(top: 5, left: 4),
+                                          child: CircleAvatar(
+                                            radius: 20,
+                                            backgroundColor: Colors.white,
+                                            child: Image.asset(
+                                                'assets/images/tabler_calendar-exclamation.png',
+                                                fit: BoxFit.contain),
                                           ),
                                         ),
                                         Container(
