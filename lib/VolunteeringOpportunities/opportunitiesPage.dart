@@ -68,6 +68,16 @@ class _OpportunitiesPageState extends State<OpportunitiesPage> {
                                     fontFamily: 'Questrial',
                                     color: const Color(0xFF6E7191)),
                               ),
+                            ),
+                            Container(
+                              margin: EdgeInsets.only(top: 20),
+                              child: Text(
+                                '3 volunteer(s) in this Opportunity',
+                                style: TextStyle(
+                                    fontSize: 10,
+                                    fontFamily: 'Questrial',
+                                    color: const Color(0xFF6E7191)),
+                              ),
                             )
                           ],
                         )
@@ -79,7 +89,7 @@ class _OpportunitiesPageState extends State<OpportunitiesPage> {
                   children: [
                     Container(
                       alignment: Alignment.center,
-                      margin: EdgeInsets.only(top: 40),
+                      margin: EdgeInsets.only(top: 20),
                       child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
                             shape: RoundedRectangleBorder(

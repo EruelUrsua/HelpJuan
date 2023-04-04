@@ -60,6 +60,16 @@ class OrganizationPage extends StatelessWidget {
                                   color: const Color(0xFF6E7191)),
                             ),
                           ),
+                          Container(
+                            margin: EdgeInsets.only(top: 5),
+                            child: Text(
+                              '3 volunteer(s) in this Opportunity',
+                              style: TextStyle(
+                                  fontSize: 10,
+                                  fontFamily: 'Questrial',
+                                  color: const Color(0xFF6E7191)),
+                            ),
+                          ),
                         ],
                       ),
                     ],
@@ -243,16 +253,9 @@ class OrganizationPage extends StatelessWidget {
                                     margin: EdgeInsets.only(top: 20, left: 70),
                                     child: CircleAvatar(
                                       radius: 30,
-                                    ),
-                                  ),
-                                  Container(
-                                    margin: EdgeInsets.only(top: 65, left: 70),
-                                    child: Text(
-                                      '5 spots left',
-                                      style: TextStyle(
-                                          fontSize: 12,
-                                          fontFamily: 'Questrial',
-                                          color: const Color(0xFFCC8989)),
+                                      child: Image.asset(
+                                          'assets/images/RedAlert.png',
+                                          fit: BoxFit.contain),
                                     ),
                                   ),
                                 ],

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:solutions_challenge_app/VolunteeringOpportunities/volunteeringOpportunities.dart';
 import 'package:solutions_challenge_app/VolunteeringOpportunities/organizationPage.dart';
+import 'package:solutions_challenge_app/VolunteeringOpportunities/opportunitiesPage.dart';
 
 class OppCancelPage extends StatefulWidget {
   const OppCancelPage({super.key});
@@ -67,6 +68,16 @@ class _OppCancelPageState extends State<OppCancelPage> {
                                     fontFamily: 'Questrial',
                                     color: const Color(0xFF6E7191)),
                               ),
+                            ),
+                            Container(
+                              margin: EdgeInsets.only(top: 20),
+                              child: Text(
+                                '3 volunteer(s) in this Opportunity',
+                                style: TextStyle(
+                                    fontSize: 10,
+                                    fontFamily: 'Questrial',
+                                    color: const Color(0xFF6E7191)),
+                              ),
                             )
                           ],
                         )
@@ -78,7 +89,7 @@ class _OppCancelPageState extends State<OppCancelPage> {
                   children: [
                     Container(
                       alignment: Alignment.center,
-                      margin: EdgeInsets.only(top: 40),
+                      margin: EdgeInsets.only(top: 20),
                       child: OutlinedButton(
                         style: OutlinedButton.styleFrom(
                           shape: RoundedRectangleBorder(
@@ -97,11 +108,112 @@ class _OppCancelPageState extends State<OppCancelPage> {
                               fontFamily: 'Questrial',
                               color: Color(0xFFCC8989)),
                         ),
-                        onPressed: () {},
-
-                        // Navigator.of(context).push(MaterialPageRoute(
-                        //     builder: (context) => OrganizationPage()));
-                        // },
+                        onPressed: () {
+                          showDialog(
+                            context: context,
+                            builder: (BuildContext context) {
+                              return AlertDialog(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
+                                backgroundColor: Color(0xFF58A7B9),
+                                title: Center(
+                                  child: new Text(
+                                    '       Are you sure \n you want to Cancel?',
+                                    style: TextStyle(
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.bold,
+                                        fontFamily: 'Questrial',
+                                        color: Colors.white),
+                                  ),
+                                ),
+                                content: new SingleChildScrollView(
+                                  child: new ListBody(
+                                    children: [
+                                      Container(
+                                        margin: EdgeInsets.only(bottom: 10),
+                                        child: Center(
+                                          child: new Text(
+                                            'Lorem ipsum dolor sit amet, consec',
+                                            style: TextStyle(
+                                                fontSize: 12,
+                                                fontFamily: 'Questrial',
+                                                color: Colors.white),
+                                          ),
+                                        ),
+                                      ),
+                                      new Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: [
+                                          new Container(
+                                              alignment: Alignment.center,
+                                              margin: EdgeInsets.only(
+                                                  right: 10, top: 10),
+                                              child: ElevatedButton(
+                                                style: ElevatedButton.styleFrom(
+                                                    shape:
+                                                        RoundedRectangleBorder(
+                                                            borderRadius:
+                                                                BorderRadius
+                                                                    .circular(
+                                                                        15)),
+                                                    minimumSize: Size(100, 45),
+                                                    textStyle:
+                                                        TextStyle(fontSize: 14),
+                                                    primary: Colors.white,
+                                                    onPrimary: Colors.white),
+                                                child: Text(
+                                                  'Yes',
+                                                  style: TextStyle(
+                                                      fontSize: 14,
+                                                      fontWeight:
+                                                          FontWeight.bold,
+                                                      fontFamily: 'Questrial',
+                                                      color: Color(0xFF58A7B9)),
+                                                ),
+                                                onPressed: () {
+                                                  Navigator.of(context).push(
+                                                      MaterialPageRoute(
+                                                          builder: (context) =>
+                                                              OpportunitiesPage()));
+                                                },
+                                              )),
+                                          new Container(
+                                              alignment: Alignment.center,
+                                              margin: EdgeInsets.only(
+                                                  left: 10, top: 10),
+                                              child: OutlinedButton(
+                                                style: OutlinedButton.styleFrom(
+                                                  shape: RoundedRectangleBorder(
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              15)),
+                                                  minimumSize: Size(100, 45),
+                                                  textStyle:
+                                                      TextStyle(fontSize: 14),
+                                                  primary: Colors.white,
+                                                  side: BorderSide(
+                                                      width: 2,
+                                                      color: Colors.white),
+                                                  // onPrimary: Colors.white),
+                                                ),
+                                                onPressed: () {
+                                                  Navigator.of(context,
+                                                          rootNavigator: true)
+                                                      .pop('dialog');
+                                                },
+                                                child: Text('No'),
+                                              ))
+                                        ],
+                                      )
+                                    ],
+                                  ),
+                                ),
+                              );
+                            },
+                          );
+                        },
                       ),
                     ),
                     Row(
