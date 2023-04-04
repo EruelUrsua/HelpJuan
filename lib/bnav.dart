@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:solutions_challenge_app/VolunteeringOpportunities/volunteeringOpportunities.dart';
+import 'package:solutions_challenge_app/chat/chat.dart';
 import 'package:solutions_challenge_app/profile.dart';
 
 class Nav extends StatefulWidget {
@@ -12,6 +13,7 @@ class _NavState extends State<Nav> {
   List<Widget> _widgetOptions = <Widget>[
     VolunteeringOpportunitiesPage(),
     profile(),
+    chatPage(),
   ];
 
   void _onItemTap(int index) {
@@ -32,15 +34,17 @@ class _NavState extends State<Nav> {
             type: BottomNavigationBarType.fixed,
             items: const <BottomNavigationBarItem>[
               BottomNavigationBarItem(
-                icon: Icon(Icons.home),
+                icon: ImageIcon(
+                    AssetImage('assets/images/volunteer_inactive.png')),
                 label: 'Volunteer',
               ),
               BottomNavigationBarItem(
-                icon: Icon(Icons.face),
+                icon:
+                    ImageIcon(AssetImage('assets/images/profile_inactive.png')),
                 label: 'Profile',
               ),
               BottomNavigationBarItem(
-                icon: Icon(Icons.chat_bubble),
+                icon: ImageIcon(AssetImage('assets/images/chat_inactive.png')),
                 label: 'Chat',
               ),
             ],
