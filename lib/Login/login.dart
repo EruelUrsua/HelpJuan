@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:solutions_challenge_app/VolunteeringOpportunities/volunteeringOpportunities.dart';
 import 'package:solutions_challenge_app/Login/register.dart';
+import 'package:solutions_challenge_app/bnav.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -107,11 +108,8 @@ class _LoginState extends State<Login> {
                               color: Color(0xFF58A7B9)),
                         ),
                         onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) =>
-                                      VolunteeringOpportunitiesPage()));
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) => Nav()));
                         },
                       ),
                     ),
