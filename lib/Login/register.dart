@@ -28,7 +28,7 @@ class _RegisterState extends State<Register> {
                   Center(
                     child: Container(
                       margin: EdgeInsets.only(bottom: 80),
-                      child: Image.asset('assets/images/HelpJuan Logo (1).png'),
+                      child: Image.asset('assets/images/NewHelpJuanLogo.png'),
                     ),
                   ),
                   Container(
@@ -37,7 +37,7 @@ class _RegisterState extends State<Register> {
                       style: TextStyle(
                         fontSize: 35,
                         fontWeight: FontWeight.bold,
-                        color: Color(0xFF58A7B9),
+                        color: Color(0xFF0079BD),
                       ),
                     ),
                   ),
@@ -114,7 +114,7 @@ class _RegisterState extends State<Register> {
                                 borderRadius: BorderRadius.circular(15)),
                             minimumSize: Size(100, 45),
                             textStyle: TextStyle(fontSize: 14),
-                            primary: Color(0xFF58A7B9),
+                            primary: Color(0xFF0079BD),
                             onPrimary: Colors.white),
                         child: Text(
                           'Sign Up',
@@ -150,7 +150,7 @@ class _RegisterState extends State<Register> {
                             style: TextStyle(
                                 fontSize: 14,
                                 fontWeight: FontWeight.bold,
-                                color: Color(0xFF58A7B9)),
+                                color: Color(0xFF0079BD)),
                           ),
                           onTap: () {
                             Navigator.push(

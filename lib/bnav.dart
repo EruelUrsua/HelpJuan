@@ -29,7 +29,7 @@ class _NavState extends State<Nav> {
           child: _widgetOptions.elementAt(_selectedIndex),
         ),
         bottomNavigationBar: new Theme(
-          data: Theme.of(context).copyWith(canvasColor: Color(0xFF58A7B9)),
+          data: Theme.of(context).copyWith(canvasColor: Color(0xFF0079BD)),
           child: BottomNavigationBar(
             type: BottomNavigationBarType.fixed,
             items: const <BottomNavigationBarItem>[

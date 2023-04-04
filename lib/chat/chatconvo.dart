@@ -71,10 +71,10 @@ class _chatConvoPageState extends State<chatConvoPage> {
                     hintText: "Write a message...",
                     hintStyle: TextStyle(
                       fontSize: 16,
-                      color: Color(0xFF58A7B9),
+                      color: Color(0xFF0079BD),
                     ),
                     prefixIcon: Icon(Icons.emoji_emotions),
-                    prefixIconColor: Color(0xFF58A7B9)),
+                    prefixIconColor: Color(0xFF0079BD)),
               ),
             ),
           ))
