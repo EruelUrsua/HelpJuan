@@ -15,706 +15,690 @@ class VolunteeringOpportunitiesPage extends StatefulWidget {
 
 class _VolunteeringOpportunitiesPageState
     extends State<VolunteeringOpportunitiesPage> {
-  final int index1 = 0;
-  final int index2 = 0;
-  final List<String> items = List.generate(5, (index) => "Item $index");
-  final List<String> name = [
-    'Red Alert',
-    'Safety Check',
-    'Bayanihan',
-    'Red Alert',
-    'Safety Check'
-  ];
-  final List<String> logo = [
-    'assets/images/RedOne.png',
-    'assets/images/SafetyOne.png',
-    'assets/images/BayanihanOne.png',
-    'assets/images/RedOne.png',
-    'assets/images/SafetyOne.png'
-  ];
-
   final auth = FirebaseAuth.instance;
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        actions: <Widget>[
-          IconButton(
-              icon: Icon(
-                Icons.logout,
-                color: Colors.white,
-                size: 25,
-              ),
-              onPressed: () {
-                Authentication().signOut();
-              })
-        ],
-      ), // AppBar
-      body: Padding(
-        padding: EdgeInsets.all(16),
-        child: SingleChildScrollView(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Container(
-                child: Text('Volunteering Opportunities',
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 15)), //volunteering opportunities
-              ),
-              SizedBox(height: 20),
-              TextField(
-                decoration: InputDecoration(
-                  filled: true,
-                  fillColor: Colors.white,
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(8.0),
-                    borderSide: BorderSide.none,
-                  ),
-                  hintText: "Search",
-                  prefixIcon: Icon(Icons.search),
+    return LayoutBuilder(builder: (context, constraints) {
+      return Scaffold(
+        appBar: AppBar(
+          centerTitle: true,
+          actions: <Widget>[
+            IconButton(
+                icon: Icon(
+                  Icons.logout,
+                  color: Colors.white,
+                  size: 25,
                 ),
-              ), //search bar--------------------------
-              GestureDetector(
-                onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => OpportunitiesPage()));
-                },
-                child: Container(
-                  margin: EdgeInsets.only(top: 15),
-                  width: 350,
-                  height: 170,
-                  child: Material(
-                    elevation: 3,
-                    color: Colors.white,
-                    shadowColor: Colors.black,
-                    borderRadius: BorderRadius.circular(20),
-                    child: Padding(
-                      padding: const EdgeInsets.all(0),
-                      child: Row(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Container(
-                                margin: EdgeInsets.only(top: 20, left: 15),
-                                child: Text(
-                                  'Red Alert Local Chapter',
-                                  style: TextStyle(
-                                      fontSize: 12,
-                                      fontWeight: FontWeight.bold,
-                                      fontFamily: 'Questrial',
-                                      color: const Color(0xFF6E7191)),
-                                ),
-                              ),
-                              Container(
-                                margin: EdgeInsets.only(top: 3, left: 15),
-                                child: Text(
-                                  'Emergency Services',
-                                  style: TextStyle(
-                                      fontSize: 12,
-                                      fontFamily: 'Questrial',
-                                      color: const Color(0xFF6E7191)),
-                                ),
-                              ),
-                              Row(
-                                children: [
-                                  Container(
-                                    margin: EdgeInsets.only(top: 3, left: 15),
-                                    child: Text(
-                                      'Difficulty: ',
-                                      style: TextStyle(
-                                          fontSize: 12,
-                                          fontWeight: FontWeight.bold,
-                                          fontFamily: 'Questrial',
-                                          color: const Color(0xFF6E7191)),
-                                    ),
-                                  ),
-                                  Container(
-                                    margin: EdgeInsets.only(top: 3),
-                                    child: Text(
-                                      'High',
-                                      style: TextStyle(
-                                          fontSize: 12,
-                                          fontFamily: 'Questrial',
-                                          color: Color(0xFFCC8989)),
-                                    ),
-                                  )
-                                ],
-                              ),
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Row(
-                                    children: [
-                                      Container(
-                                        margin:
-                                            EdgeInsets.only(top: 15, left: 15),
-                                        child: InkWell(
-                                          child: Container(
-                                            width: 20,
-                                            height: 20,
-                                            color: Color(0xFFD9D9D9),
-                                          ),
-                                        ),
-                                      ),
-                                      Container(
-                                        margin:
-                                            EdgeInsets.only(top: 15, left: 5),
-                                        child: Text(
-                                          'Location',
-                                          style: TextStyle(
-                                              fontSize: 12,
-                                              fontFamily: 'Questrial',
-                                              color: const Color(0xFF6E7191)),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                  Row(
-                                    children: [
-                                      Container(
-                                        margin:
-                                            EdgeInsets.only(top: 5, left: 15),
-                                        child: InkWell(
-                                          child: Container(
-                                            width: 20,
-                                            height: 20,
-                                            color: Color(0xFFD9D9D9),
-                                          ),
-                                        ),
-                                      ),
-                                      Container(
-                                        margin:
-                                            EdgeInsets.only(top: 5, left: 5),
-                                        child: Text(
-                                          '11PM - 5AM Oct 25, 2022',
-                                          style: TextStyle(
-                                              fontSize: 12,
-                                              fontFamily: 'Questrial',
-                                              color: const Color(0xFF6E7191)),
-                                        ),
-                                      )
-                                    ],
-                                  ),
-                                ],
-                              )
-                            ],
-                          ),
-                          Column(
-                            children: [
-                              Container(
-                                margin: EdgeInsets.only(top: 20, left: 70),
-                                child: CircleAvatar(
-                                  radius: 30,
-                                  backgroundColor: Colors.white,
-                                  child: Image.asset(
-                                      'assets/images/RedAlert.png',
-                                      fit: BoxFit.contain),
-                                ),
-                              ),
-                              Container(
-                                margin: EdgeInsets.only(top: 65, left: 70),
-                                child: Text(
-                                  '5 spots left',
-                                  style: TextStyle(
-                                      fontSize: 12,
-                                      fontFamily: 'Questrial',
-                                      color: const Color(0xFFCC8989)),
-                                ),
-                              ),
-                            ],
-                          )
-                        ],
-                      ),
+                onPressed: () {
+                  Authentication().signOut();
+                })
+          ],
+        ), // AppBar
+        body: Padding(
+          padding: EdgeInsets.all(16),
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Container(
+                  child: Text('Volunteering Opportunities',
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 15)), //volunteering opportunities
+                ),
+                SizedBox(height: 20),
+                TextField(
+                  decoration: InputDecoration(
+                    filled: true,
+                    fillColor: Colors.white,
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(8.0),
+                      borderSide: BorderSide.none,
                     ),
+                    hintText: "Search",
+                    prefixIcon: Icon(Icons.search),
                   ),
-                ),
-              ),
-              GestureDetector(
-                onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => OpportunitiesPage()));
-                },
-                child: Container(
-                  margin: EdgeInsets.only(top: 15),
-                  width: 350,
-                  height: 170,
-                  child: Material(
-                    elevation: 3,
-                    color: Colors.white,
-                    shadowColor: Colors.black,
-                    borderRadius: BorderRadius.circular(20),
-                    child: Padding(
-                      padding: const EdgeInsets.all(0),
-                      child: Row(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Container(
-                                margin: EdgeInsets.only(top: 20, left: 15),
-                                child: Text(
-                                  'Bayanihan Local Chapter',
-                                  style: TextStyle(
-                                      fontSize: 12,
-                                      fontWeight: FontWeight.bold,
-                                      fontFamily: 'Questrial',
-                                      color: const Color(0xFF6E7191)),
-                                ),
-                              ),
-                              Container(
-                                margin: EdgeInsets.only(top: 3, left: 15),
-                                child: Text(
-                                  'Emergency Services',
-                                  style: TextStyle(
-                                      fontSize: 12,
-                                      fontFamily: 'Questrial',
-                                      color: const Color(0xFF6E7191)),
-                                ),
-                              ),
-                              Row(
-                                children: [
-                                  Container(
-                                    margin: EdgeInsets.only(top: 3, left: 15),
-                                    child: Text(
-                                      'Difficulty: ',
-                                      style: TextStyle(
-                                          fontSize: 12,
-                                          fontWeight: FontWeight.bold,
-                                          fontFamily: 'Questrial',
-                                          color: const Color(0xFF6E7191)),
-                                    ),
+                ), //search bar--------------------------
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => OpportunitiesPage()));
+                  },
+                  child: Container(
+                    margin: EdgeInsets.only(top: 15),
+                    width: 350,
+                    height: 170,
+                    child: Material(
+                      elevation: 3,
+                      color: Colors.white,
+                      shadowColor: Colors.black,
+                      borderRadius: BorderRadius.circular(20),
+                      child: Padding(
+                        padding: const EdgeInsets.all(0),
+                        child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Container(
+                                  margin: EdgeInsets.only(top: 20, left: 15),
+                                  child: Text(
+                                    'Red Alert Local Chapter',
+                                    style: TextStyle(
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.bold,
+                                        fontFamily: 'Questrial',
+                                        color: const Color(0xFF6E7191)),
                                   ),
-                                  Container(
-                                    margin: EdgeInsets.only(top: 3),
-                                    child: Text(
-                                      'High',
-                                      style: TextStyle(
-                                          fontSize: 12,
-                                          fontFamily: 'Questrial',
-                                          color: Color(0xFFCC8989)),
+                                ),
+                                Container(
+                                  margin: EdgeInsets.only(top: 3, left: 15),
+                                  child: Text(
+                                    'Emergency Services',
+                                    style: TextStyle(
+                                        fontSize: 12,
+                                        fontFamily: 'Questrial',
+                                        color: const Color(0xFF6E7191)),
+                                  ),
+                                ),
+                                Row(
+                                  children: [
+                                    Container(
+                                      margin: EdgeInsets.only(top: 3, left: 15),
+                                      child: Text(
+                                        'Difficulty: ',
+                                        style: TextStyle(
+                                            fontSize: 12,
+                                            fontWeight: FontWeight.bold,
+                                            fontFamily: 'Questrial',
+                                            color: const Color(0xFF6E7191)),
+                                      ),
                                     ),
-                                  )
-                                ],
-                              ),
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Row(
-                                    children: [
-                                      Container(
-                                        margin:
-                                            EdgeInsets.only(top: 15, left: 15),
-                                        child: InkWell(
-                                          child: Container(
-                                            width: 20,
-                                            height: 20,
-                                            color: Color(0xFFD9D9D9),
+                                    Container(
+                                      margin: EdgeInsets.only(top: 3),
+                                      child: Text(
+                                        'High',
+                                        style: TextStyle(
+                                            fontSize: 12,
+                                            fontFamily: 'Questrial',
+                                            color: Color(0xFFCC8989)),
+                                      ),
+                                    )
+                                  ],
+                                ),
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Row(
+                                      children: [
+                                        Container(
+                                          margin: EdgeInsets.only(
+                                              top: 15, left: 15),
+                                          child: InkWell(
+                                            child: Container(
+                                              width: 20,
+                                              height: 20,
+                                              color: Color(0xFFD9D9D9),
+                                            ),
                                           ),
                                         ),
-                                      ),
-                                      Container(
-                                        margin:
-                                            EdgeInsets.only(top: 15, left: 5),
-                                        child: Text(
-                                          'Location',
-                                          style: TextStyle(
-                                              fontSize: 12,
-                                              fontFamily: 'Questrial',
-                                              color: const Color(0xFF6E7191)),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                  Row(
-                                    children: [
-                                      Container(
-                                        margin:
-                                            EdgeInsets.only(top: 5, left: 15),
-                                        child: InkWell(
-                                          child: Container(
-                                            width: 20,
-                                            height: 20,
-                                            color: Color(0xFFD9D9D9),
+                                        Container(
+                                          margin:
+                                              EdgeInsets.only(top: 15, left: 5),
+                                          child: Text(
+                                            'Location',
+                                            style: TextStyle(
+                                                fontSize: 12,
+                                                fontFamily: 'Questrial',
+                                                color: const Color(0xFF6E7191)),
                                           ),
                                         ),
-                                      ),
-                                      Container(
-                                        margin:
-                                            EdgeInsets.only(top: 5, left: 5),
-                                        child: Text(
-                                          '11PM - 5AM Oct 25, 2022',
-                                          style: TextStyle(
-                                              fontSize: 12,
-                                              fontFamily: 'Questrial',
-                                              color: const Color(0xFF6E7191)),
+                                      ],
+                                    ),
+                                    Row(
+                                      children: [
+                                        Container(
+                                          margin:
+                                              EdgeInsets.only(top: 5, left: 15),
+                                          child: InkWell(
+                                            child: Container(
+                                              width: 20,
+                                              height: 20,
+                                              color: Color(0xFFD9D9D9),
+                                            ),
+                                          ),
                                         ),
-                                      )
-                                    ],
-                                  ),
-                                ],
-                              )
-                            ],
-                          ),
-                          Column(
-                            children: [
-                              Container(
-                                margin: EdgeInsets.only(top: 20, left: 60),
-                                child: CircleAvatar(
-                                    radius: 40,
+                                        Container(
+                                          margin:
+                                              EdgeInsets.only(top: 5, left: 5),
+                                          child: Text(
+                                            '11PM - 5AM Oct 25, 2022',
+                                            style: TextStyle(
+                                                fontSize: 12,
+                                                fontFamily: 'Questrial',
+                                                color: const Color(0xFF6E7191)),
+                                          ),
+                                        )
+                                      ],
+                                    ),
+                                  ],
+                                )
+                              ],
+                            ),
+                            Column(
+                              children: [
+                                Container(
+                                  margin: EdgeInsets.only(top: 20, left: 70),
+                                  child: CircleAvatar(
+                                    radius: 30,
                                     backgroundColor: Colors.white,
                                     child: Image.asset(
-                                        'assets/images/BayanihanOne.png',
-                                        fit: BoxFit.contain)),
-                              ),
-                              Container(
-                                margin: EdgeInsets.only(top: 45, left: 60),
-                                child: Text(
-                                  '5 spots left',
-                                  style: TextStyle(
-                                      fontSize: 12,
-                                      fontFamily: 'Questrial',
-                                      color: const Color(0xFFCC8989)),
+                                        'assets/images/RedAlert.png',
+                                        fit: BoxFit.contain),
+                                  ),
                                 ),
-                              ),
-                            ],
-                          )
-                        ],
+                                Container(
+                                  margin: EdgeInsets.only(top: 65, left: 70),
+                                  child: Text(
+                                    '5 spots left',
+                                    style: TextStyle(
+                                        fontSize: 12,
+                                        fontFamily: 'Questrial',
+                                        color: const Color(0xFFCC8989)),
+                                  ),
+                                ),
+                              ],
+                            )
+                          ],
+                        ),
                       ),
                     ),
                   ),
                 ),
-              ),
-              GestureDetector(
-                onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => OpportunitiesPage()));
-                },
-                child: Container(
-                  margin: EdgeInsets.only(top: 15),
-                  width: 350,
-                  height: 170,
-                  child: Material(
-                    elevation: 3,
-                    color: Colors.white,
-                    shadowColor: Colors.black,
-                    borderRadius: BorderRadius.circular(20),
-                    child: Padding(
-                      padding: const EdgeInsets.all(0),
-                      child: Row(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Container(
-                                margin: EdgeInsets.only(top: 20, left: 15),
-                                child: Text(
-                                  'Safety Check Local Chapter',
-                                  style: TextStyle(
-                                      fontSize: 12,
-                                      fontWeight: FontWeight.bold,
-                                      fontFamily: 'Questrial',
-                                      color: const Color(0xFF6E7191)),
-                                ),
-                              ),
-                              Container(
-                                margin: EdgeInsets.only(top: 3, left: 15),
-                                child: Text(
-                                  'Emergency Services',
-                                  style: TextStyle(
-                                      fontSize: 12,
-                                      fontFamily: 'Questrial',
-                                      color: const Color(0xFF6E7191)),
-                                ),
-                              ),
-                              Row(
-                                children: [
-                                  Container(
-                                    margin: EdgeInsets.only(top: 3, left: 15),
-                                    child: Text(
-                                      'Difficulty: ',
-                                      style: TextStyle(
-                                          fontSize: 12,
-                                          fontWeight: FontWeight.bold,
-                                          fontFamily: 'Questrial',
-                                          color: const Color(0xFF6E7191)),
-                                    ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => OpportunitiesPage()));
+                  },
+                  child: Container(
+                    margin: EdgeInsets.only(top: 15),
+                    width: 350,
+                    height: 170,
+                    child: Material(
+                      elevation: 3,
+                      color: Colors.white,
+                      shadowColor: Colors.black,
+                      borderRadius: BorderRadius.circular(20),
+                      child: Padding(
+                        padding: const EdgeInsets.all(0),
+                        child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Container(
+                                  margin: EdgeInsets.only(top: 20, left: 15),
+                                  child: Text(
+                                    'Bayanihan Local Chapter',
+                                    style: TextStyle(
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.bold,
+                                        fontFamily: 'Questrial',
+                                        color: const Color(0xFF6E7191)),
                                   ),
-                                  Container(
-                                    margin: EdgeInsets.only(top: 3),
-                                    child: Text(
-                                      'High',
-                                      style: TextStyle(
-                                          fontSize: 12,
-                                          fontFamily: 'Questrial',
-                                          color: Color(0xFFCC8989)),
+                                ),
+                                Container(
+                                  margin: EdgeInsets.only(top: 3, left: 15),
+                                  child: Text(
+                                    'Emergency Services',
+                                    style: TextStyle(
+                                        fontSize: 12,
+                                        fontFamily: 'Questrial',
+                                        color: const Color(0xFF6E7191)),
+                                  ),
+                                ),
+                                Row(
+                                  children: [
+                                    Container(
+                                      margin: EdgeInsets.only(top: 3, left: 15),
+                                      child: Text(
+                                        'Difficulty: ',
+                                        style: TextStyle(
+                                            fontSize: 12,
+                                            fontWeight: FontWeight.bold,
+                                            fontFamily: 'Questrial',
+                                            color: const Color(0xFF6E7191)),
+                                      ),
                                     ),
-                                  )
-                                ],
-                              ),
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Row(
-                                    children: [
-                                      Container(
-                                        margin:
-                                            EdgeInsets.only(top: 15, left: 15),
-                                        child: InkWell(
-                                          child: Container(
-                                            width: 20,
-                                            height: 20,
-                                            color: Color(0xFFD9D9D9),
+                                    Container(
+                                      margin: EdgeInsets.only(top: 3),
+                                      child: Text(
+                                        'High',
+                                        style: TextStyle(
+                                            fontSize: 12,
+                                            fontFamily: 'Questrial',
+                                            color: Color(0xFFCC8989)),
+                                      ),
+                                    )
+                                  ],
+                                ),
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Row(
+                                      children: [
+                                        Container(
+                                          margin: EdgeInsets.only(
+                                              top: 15, left: 15),
+                                          child: InkWell(
+                                            child: Container(
+                                              width: 20,
+                                              height: 20,
+                                              color: Color(0xFFD9D9D9),
+                                            ),
                                           ),
                                         ),
-                                      ),
-                                      Container(
-                                        margin:
-                                            EdgeInsets.only(top: 15, left: 5),
-                                        child: Text(
-                                          'Location',
-                                          style: TextStyle(
-                                              fontSize: 12,
-                                              fontFamily: 'Questrial',
-                                              color: const Color(0xFF6E7191)),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                  Row(
-                                    children: [
-                                      Container(
-                                        margin:
-                                            EdgeInsets.only(top: 5, left: 15),
-                                        child: InkWell(
-                                          child: Container(
-                                            width: 20,
-                                            height: 20,
-                                            color: Color(0xFFD9D9D9),
+                                        Container(
+                                          margin:
+                                              EdgeInsets.only(top: 15, left: 5),
+                                          child: Text(
+                                            'Location',
+                                            style: TextStyle(
+                                                fontSize: 12,
+                                                fontFamily: 'Questrial',
+                                                color: const Color(0xFF6E7191)),
                                           ),
                                         ),
-                                      ),
-                                      Container(
-                                        margin:
-                                            EdgeInsets.only(top: 5, left: 5),
-                                        child: Text(
-                                          '11PM - 5AM Oct 25, 2022',
-                                          style: TextStyle(
-                                              fontSize: 12,
-                                              fontFamily: 'Questrial',
-                                              color: const Color(0xFF6E7191)),
+                                      ],
+                                    ),
+                                    Row(
+                                      children: [
+                                        Container(
+                                          margin:
+                                              EdgeInsets.only(top: 5, left: 15),
+                                          child: InkWell(
+                                            child: Container(
+                                              width: 20,
+                                              height: 20,
+                                              color: Color(0xFFD9D9D9),
+                                            ),
+                                          ),
                                         ),
-                                      )
-                                    ],
+                                        Container(
+                                          margin:
+                                              EdgeInsets.only(top: 5, left: 5),
+                                          child: Text(
+                                            '11PM - 5AM Oct 25, 2022',
+                                            style: TextStyle(
+                                                fontSize: 12,
+                                                fontFamily: 'Questrial',
+                                                color: const Color(0xFF6E7191)),
+                                          ),
+                                        )
+                                      ],
+                                    ),
+                                  ],
+                                )
+                              ],
+                            ),
+                            Column(
+                              children: [
+                                Container(
+                                  margin: EdgeInsets.only(top: 20, left: 60),
+                                  child: CircleAvatar(
+                                      radius: 40,
+                                      backgroundColor: Colors.white,
+                                      child: Image.asset(
+                                          'assets/images/BayanihanOne.png',
+                                          fit: BoxFit.contain)),
+                                ),
+                                Container(
+                                  margin: EdgeInsets.only(top: 45, left: 60),
+                                  child: Text(
+                                    '5 spots left',
+                                    style: TextStyle(
+                                        fontSize: 12,
+                                        fontFamily: 'Questrial',
+                                        color: const Color(0xFFCC8989)),
                                   ),
-                                ],
-                              )
-                            ],
-                          ),
-                          Column(
-                            children: [
-                              Container(
-                                margin: EdgeInsets.only(top: 20, left: 60),
-                                child: CircleAvatar(
-                                    radius: 40,
+                                ),
+                              ],
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => OpportunitiesPage()));
+                  },
+                  child: Container(
+                    margin: EdgeInsets.only(top: 15),
+                    width: 350,
+                    height: 170,
+                    child: Material(
+                      elevation: 3,
+                      color: Colors.white,
+                      shadowColor: Colors.black,
+                      borderRadius: BorderRadius.circular(20),
+                      child: Padding(
+                        padding: const EdgeInsets.all(0),
+                        child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Container(
+                                  margin: EdgeInsets.only(top: 20, left: 15),
+                                  child: Text(
+                                    'Safety Check Local Chapter',
+                                    style: TextStyle(
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.bold,
+                                        fontFamily: 'Questrial',
+                                        color: const Color(0xFF6E7191)),
+                                  ),
+                                ),
+                                Container(
+                                  margin: EdgeInsets.only(top: 3, left: 15),
+                                  child: Text(
+                                    'Emergency Services',
+                                    style: TextStyle(
+                                        fontSize: 12,
+                                        fontFamily: 'Questrial',
+                                        color: const Color(0xFF6E7191)),
+                                  ),
+                                ),
+                                Row(
+                                  children: [
+                                    Container(
+                                      margin: EdgeInsets.only(top: 3, left: 15),
+                                      child: Text(
+                                        'Difficulty: ',
+                                        style: TextStyle(
+                                            fontSize: 12,
+                                            fontWeight: FontWeight.bold,
+                                            fontFamily: 'Questrial',
+                                            color: const Color(0xFF6E7191)),
+                                      ),
+                                    ),
+                                    Container(
+                                      margin: EdgeInsets.only(top: 3),
+                                      child: Text(
+                                        'High',
+                                        style: TextStyle(
+                                            fontSize: 12,
+                                            fontFamily: 'Questrial',
+                                            color: Color(0xFFCC8989)),
+                                      ),
+                                    )
+                                  ],
+                                ),
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Row(
+                                      children: [
+                                        Container(
+                                          margin: EdgeInsets.only(
+                                              top: 15, left: 15),
+                                          child: InkWell(
+                                            child: Container(
+                                              width: 20,
+                                              height: 20,
+                                              color: Color(0xFFD9D9D9),
+                                            ),
+                                          ),
+                                        ),
+                                        Container(
+                                          margin:
+                                              EdgeInsets.only(top: 15, left: 5),
+                                          child: Text(
+                                            'Location',
+                                            style: TextStyle(
+                                                fontSize: 12,
+                                                fontFamily: 'Questrial',
+                                                color: const Color(0xFF6E7191)),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    Row(
+                                      children: [
+                                        Container(
+                                          margin:
+                                              EdgeInsets.only(top: 5, left: 15),
+                                          child: InkWell(
+                                            child: Container(
+                                              width: 20,
+                                              height: 20,
+                                              color: Color(0xFFD9D9D9),
+                                            ),
+                                          ),
+                                        ),
+                                        Container(
+                                          margin:
+                                              EdgeInsets.only(top: 5, left: 5),
+                                          child: Text(
+                                            '11PM - 5AM Oct 25, 2022',
+                                            style: TextStyle(
+                                                fontSize: 12,
+                                                fontFamily: 'Questrial',
+                                                color: const Color(0xFF6E7191)),
+                                          ),
+                                        )
+                                      ],
+                                    ),
+                                  ],
+                                )
+                              ],
+                            ),
+                            Column(
+                              children: [
+                                Container(
+                                  margin: EdgeInsets.only(top: 20, left: 60),
+                                  child: CircleAvatar(
+                                      radius: 40,
+                                      backgroundColor: Colors.white,
+                                      child: Image.asset(
+                                          'assets/images/SafetyOne.png',
+                                          fit: BoxFit.contain)),
+                                ),
+                                Container(
+                                  margin: EdgeInsets.only(top: 45, left: 60),
+                                  child: Text(
+                                    '5 spots left',
+                                    style: TextStyle(
+                                        fontSize: 12,
+                                        fontFamily: 'Questrial',
+                                        color: const Color(0xFFCC8989)),
+                                  ),
+                                ),
+                              ],
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => OpportunitiesPage()));
+                  },
+                  child: Container(
+                    margin: EdgeInsets.only(top: 15, bottom: 10),
+                    width: 350,
+                    height: 170,
+                    child: Material(
+                      elevation: 3,
+                      color: Colors.white,
+                      shadowColor: Colors.black,
+                      borderRadius: BorderRadius.circular(20),
+                      child: Padding(
+                        padding: const EdgeInsets.all(0),
+                        child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Container(
+                                  margin: EdgeInsets.only(top: 20, left: 15),
+                                  child: Text(
+                                    'Red Alert Local Chapter',
+                                    style: TextStyle(
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.bold,
+                                        fontFamily: 'Questrial',
+                                        color: const Color(0xFF6E7191)),
+                                  ),
+                                ),
+                                Container(
+                                  margin: EdgeInsets.only(top: 3, left: 15),
+                                  child: Text(
+                                    'Emergency Services',
+                                    style: TextStyle(
+                                        fontSize: 12,
+                                        fontFamily: 'Questrial',
+                                        color: const Color(0xFF6E7191)),
+                                  ),
+                                ),
+                                Row(
+                                  children: [
+                                    Container(
+                                      margin: EdgeInsets.only(top: 3, left: 15),
+                                      child: Text(
+                                        'Difficulty: ',
+                                        style: TextStyle(
+                                            fontSize: 12,
+                                            fontWeight: FontWeight.bold,
+                                            fontFamily: 'Questrial',
+                                            color: const Color(0xFF6E7191)),
+                                      ),
+                                    ),
+                                    Container(
+                                      margin: EdgeInsets.only(top: 3),
+                                      child: Text(
+                                        'High',
+                                        style: TextStyle(
+                                            fontSize: 12,
+                                            fontFamily: 'Questrial',
+                                            color: Color(0xFFCC8989)),
+                                      ),
+                                    )
+                                  ],
+                                ),
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Row(
+                                      children: [
+                                        Container(
+                                          margin: EdgeInsets.only(
+                                              top: 15, left: 15),
+                                          child: InkWell(
+                                            child: Container(
+                                              width: 20,
+                                              height: 20,
+                                              color: Color(0xFFD9D9D9),
+                                            ),
+                                          ),
+                                        ),
+                                        Container(
+                                          margin:
+                                              EdgeInsets.only(top: 15, left: 5),
+                                          child: Text(
+                                            'Location',
+                                            style: TextStyle(
+                                                fontSize: 12,
+                                                fontFamily: 'Questrial',
+                                                color: const Color(0xFF6E7191)),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    Row(
+                                      children: [
+                                        Container(
+                                          margin:
+                                              EdgeInsets.only(top: 5, left: 15),
+                                          child: InkWell(
+                                            child: Container(
+                                              width: 20,
+                                              height: 20,
+                                              color: Color(0xFFD9D9D9),
+                                            ),
+                                          ),
+                                        ),
+                                        Container(
+                                          margin:
+                                              EdgeInsets.only(top: 5, left: 5),
+                                          child: Text(
+                                            '11PM - 5AM Oct 25, 2022',
+                                            style: TextStyle(
+                                                fontSize: 12,
+                                                fontFamily: 'Questrial',
+                                                color: const Color(0xFF6E7191)),
+                                          ),
+                                        )
+                                      ],
+                                    ),
+                                  ],
+                                )
+                              ],
+                            ),
+                            Column(
+                              children: [
+                                Container(
+                                  margin: EdgeInsets.only(top: 20, left: 70),
+                                  child: CircleAvatar(
+                                    radius: 30,
                                     backgroundColor: Colors.white,
                                     child: Image.asset(
-                                        'assets/images/SafetyOne.png',
-                                        fit: BoxFit.contain)),
-                              ),
-                              Container(
-                                margin: EdgeInsets.only(top: 45, left: 60),
-                                child: Text(
-                                  '5 spots left',
-                                  style: TextStyle(
-                                      fontSize: 12,
-                                      fontFamily: 'Questrial',
-                                      color: const Color(0xFFCC8989)),
+                                        'assets/images/RedAlert.png',
+                                        fit: BoxFit.contain),
+                                  ),
                                 ),
-                              ),
-                            ],
-                          )
-                        ],
+                                Container(
+                                  margin: EdgeInsets.only(top: 65, left: 70),
+                                  child: Text(
+                                    '5 spots left',
+                                    style: TextStyle(
+                                        fontSize: 12,
+                                        fontFamily: 'Questrial',
+                                        color: const Color(0xFFCC8989)),
+                                  ),
+                                ),
+                              ],
+                            )
+                          ],
+                        ),
                       ),
                     ),
                   ),
                 ),
-              ),
-              GestureDetector(
-                onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => OpportunitiesPage()));
-                },
-                child: Container(
-                  margin: EdgeInsets.only(top: 15, bottom: 10),
-                  width: 350,
-                  height: 170,
-                  child: Material(
-                    elevation: 3,
-                    color: Colors.white,
-                    shadowColor: Colors.black,
-                    borderRadius: BorderRadius.circular(20),
-                    child: Padding(
-                      padding: const EdgeInsets.all(0),
-                      child: Row(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Container(
-                                margin: EdgeInsets.only(top: 20, left: 15),
-                                child: Text(
-                                  'Red Alert Local Chapter',
-                                  style: TextStyle(
-                                      fontSize: 12,
-                                      fontWeight: FontWeight.bold,
-                                      fontFamily: 'Questrial',
-                                      color: const Color(0xFF6E7191)),
-                                ),
-                              ),
-                              Container(
-                                margin: EdgeInsets.only(top: 3, left: 15),
-                                child: Text(
-                                  'Emergency Services',
-                                  style: TextStyle(
-                                      fontSize: 12,
-                                      fontFamily: 'Questrial',
-                                      color: const Color(0xFF6E7191)),
-                                ),
-                              ),
-                              Row(
-                                children: [
-                                  Container(
-                                    margin: EdgeInsets.only(top: 3, left: 15),
-                                    child: Text(
-                                      'Difficulty: ',
-                                      style: TextStyle(
-                                          fontSize: 12,
-                                          fontWeight: FontWeight.bold,
-                                          fontFamily: 'Questrial',
-                                          color: const Color(0xFF6E7191)),
-                                    ),
-                                  ),
-                                  Container(
-                                    margin: EdgeInsets.only(top: 3),
-                                    child: Text(
-                                      'High',
-                                      style: TextStyle(
-                                          fontSize: 12,
-                                          fontFamily: 'Questrial',
-                                          color: Color(0xFFCC8989)),
-                                    ),
-                                  )
-                                ],
-                              ),
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Row(
-                                    children: [
-                                      Container(
-                                        margin:
-                                            EdgeInsets.only(top: 15, left: 15),
-                                        child: InkWell(
-                                          child: Container(
-                                            width: 20,
-                                            height: 20,
-                                            color: Color(0xFFD9D9D9),
-                                          ),
-                                        ),
-                                      ),
-                                      Container(
-                                        margin:
-                                            EdgeInsets.only(top: 15, left: 5),
-                                        child: Text(
-                                          'Location',
-                                          style: TextStyle(
-                                              fontSize: 12,
-                                              fontFamily: 'Questrial',
-                                              color: const Color(0xFF6E7191)),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                  Row(
-                                    children: [
-                                      Container(
-                                        margin:
-                                            EdgeInsets.only(top: 5, left: 15),
-                                        child: InkWell(
-                                          child: Container(
-                                            width: 20,
-                                            height: 20,
-                                            color: Color(0xFFD9D9D9),
-                                          ),
-                                        ),
-                                      ),
-                                      Container(
-                                        margin:
-                                            EdgeInsets.only(top: 5, left: 5),
-                                        child: Text(
-                                          '11PM - 5AM Oct 25, 2022',
-                                          style: TextStyle(
-                                              fontSize: 12,
-                                              fontFamily: 'Questrial',
-                                              color: const Color(0xFF6E7191)),
-                                        ),
-                                      )
-                                    ],
-                                  ),
-                                ],
-                              )
-                            ],
-                          ),
-                          Column(
-                            children: [
-                              Container(
-                                margin: EdgeInsets.only(top: 20, left: 70),
-                                child: CircleAvatar(
-                                  radius: 30,
-                                  backgroundColor: Colors.white,
-                                  child: Image.asset(
-                                      'assets/images/RedAlert.png',
-                                      fit: BoxFit.contain),
-                                ),
-                              ),
-                              Container(
-                                margin: EdgeInsets.only(top: 65, left: 70),
-                                child: Text(
-                                  '5 spots left',
-                                  style: TextStyle(
-                                      fontSize: 12,
-                                      fontFamily: 'Questrial',
-                                      color: const Color(0xFFCC8989)),
-                                ),
-                              ),
-                            ],
-                          )
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
-      ),
-    );
+      );
+    });
   }
 }
