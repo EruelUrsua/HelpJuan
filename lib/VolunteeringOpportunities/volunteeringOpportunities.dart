@@ -33,6 +33,7 @@ class _VolunteeringOpportunitiesPageState
                   Authentication().signOut();
                 })
           ],
+          automaticallyImplyLeading: false,
         ), // AppBar
         body: Padding(
           padding: EdgeInsets.all(16),

@@ -41,6 +41,7 @@ class _profileState extends State<profile> {
               },
             )
           ],
+          automaticallyImplyLeading: false,
           elevation: 0,
           backgroundColor: const Color(0xFF58A7B9),
         ),
@@ -85,7 +86,7 @@ class _profileState extends State<profile> {
                         children: [
                           Padding(
                             padding:
-                                const EdgeInsets.only(left: 26.0, bottom: 10),
+                                const EdgeInsets.only(left: 26.0, bottom: 2),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               mainAxisAlignment: MainAxisAlignment.center,
