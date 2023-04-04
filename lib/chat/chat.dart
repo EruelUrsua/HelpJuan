@@ -29,137 +29,148 @@ class _chatPageState extends State<chatPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            Container(
-              margin: EdgeInsets.only(top: 40),
-              child: Text(
-                'Organizations',
-                style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black,
-                  fontFamily: 'Questrial',
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              Container(
+                margin: EdgeInsets.only(top: 20),
+                child: Text(
+                  'Organizations',
+                  style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black,
+                    fontFamily: 'Questrial',
+                  ),
                 ),
               ),
-            ),
-            SizedBox(
-              height: 115.0,
-              child: ListView.builder(
-                padding: EdgeInsets.only(left: 15.0),
-                scrollDirection: Axis.horizontal,
-                itemCount: items.length,
-                itemBuilder: (BuildContext context, int index) {
-                  return Padding(
-                    padding:
-                        EdgeInsets.symmetric(horizontal: 15.0, vertical: 10.0),
-                    child: Column(
-                      children: <Widget>[
-                        GestureDetector(
-                          onTap: () {
-                            // Navigator.push(
-                            //   context,
-                            //   MaterialPageRoute(
-                            //       builder: (context) => chatConvoPage()),
-                            // );
-                          },
-                          child: Material(
-                              child: CircleAvatar(
-                                radius: 30.0,
-                                backgroundColor: Colors.white,
-                                child: Image.asset(logo[index],
-                                    fit: BoxFit.contain),
+              SizedBox(
+                height: 115.0,
+                child: ListView.builder(
+                  padding: EdgeInsets.only(left: 15.0),
+                  scrollDirection: Axis.horizontal,
+                  itemCount: items.length,
+                  itemBuilder: (BuildContext context, int index) {
+                    return Padding(
+                      padding: EdgeInsets.symmetric(
+                          horizontal: 15.0, vertical: 10.0),
+                      child: Container(
+                        child: Column(
+                          children: <Widget>[
+                            GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => chatConvoPage()),
+                                );
+                              },
+                              child: Container(
+                                child: Material(
+                                    child: CircleAvatar(
+                                      radius: 30.0,
+                                      backgroundColor: Colors.white,
+                                      child: Image.asset(logo[index],
+                                          fit: BoxFit.contain),
+                                    ),
+                                    elevation: 3,
+                                    shape: const CircleBorder(
+                                        side: BorderSide.none)),
                               ),
-                              elevation: 3,
-                              shape: const CircleBorder(side: BorderSide.none)),
+                            ),
+                            SizedBox(height: 6.0),
+                            Text(
+                              name[index], // name of org
+                              style: TextStyle(
+                                color: Colors.grey,
+                                fontSize: 15.0,
+                              ),
+                            ),
+                          ],
                         ),
-                        SizedBox(height: 6.0),
-                        Text(
-                          name[index], // name of org
-                          style: TextStyle(
-                            color: Colors.grey,
-                            fontSize: 15.0,
-                          ),
-                        ),
-                      ],
-                    ),
-                  );
-                },
+                      ),
+                    );
+                  },
+                ),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 16.0, right: 16),
-              child: GestureDetector(
-                onTap: () {
-                  // Navigator.push(context,
-                  //     MaterialPageRoute(builder: (context) => chatConvoPage()));
-                },
-                child: Container(
-                  margin: EdgeInsets.only(top: 15),
-                  width: 350,
-                  height: 100,
-                  child: Material(
-                    elevation: 3,
-                    color: Colors.white,
-                    shadowColor: Colors.black,
-                    borderRadius: BorderRadius.circular(20),
-                    child: Padding(
-                      padding: const EdgeInsets.all(0),
-                      child: Column(
-                        children: [
-                          Row(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Container(
-                                margin: EdgeInsets.only(left: 15, top: 20),
-                                child: CircleAvatar(
-                                  radius: 30,
-                                  backgroundColor: Colors.blue,
-                                  child: Image.asset(
-                                      'assets/images/RedAlert.png',
-                                      fit: BoxFit.contain),
+              Padding(
+                padding: const EdgeInsets.only(left: 16.0, right: 16),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => chatConvoPage()));
+                  },
+                  child: Container(
+                    margin: EdgeInsets.only(top: 15),
+                    width: 350,
+                    height: 100,
+                    child: Material(
+                      elevation: 3,
+                      color: Colors.white,
+                      shadowColor: Colors.black,
+                      borderRadius: BorderRadius.circular(20),
+                      child: Padding(
+                        padding: const EdgeInsets.all(0),
+                        child: Column(
+                          children: [
+                            Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Container(
+                                  margin: EdgeInsets.only(left: 15, top: 20),
+                                  child: CircleAvatar(
+                                    radius: 30,
+                                    backgroundColor: Colors.blue,
+                                    child: Image.asset(
+                                        'assets/images/RedAlert.png',
+                                        fit: BoxFit.contain),
+                                  ),
                                 ),
-                              ),
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Container(
-                                    margin: EdgeInsets.only(top: 30, left: 15),
-                                    child: Text(
-                                      'Red Alert Local Chapter',
-                                      style: TextStyle(
-                                          fontSize: 12,
-                                          fontWeight: FontWeight.bold,
-                                          fontFamily: 'Questrial',
-                                          color: const Color(0xFF6E7191)),
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Container(
+                                      margin:
+                                          EdgeInsets.only(top: 30, left: 15),
+                                      child: Text(
+                                        'Red Alert Local Chapter',
+                                        style: TextStyle(
+                                            fontSize: 12,
+                                            fontWeight: FontWeight.bold,
+                                            fontFamily: 'Questrial',
+                                            color: const Color(0xFF6E7191)),
+                                      ),
                                     ),
-                                  ),
-                                  Container(
-                                    margin: EdgeInsets.only(top: 3, left: 15),
-                                    child: Text(
-                                      "You: Let's do this!",
-                                      style: TextStyle(
-                                          fontSize: 12,
-                                          fontFamily: 'Questrial',
-                                          color: const Color(0xFF6E7191)),
+                                    Container(
+                                      margin: EdgeInsets.only(top: 3, left: 15),
+                                      child: Text(
+                                        "You: Let's do this!",
+                                        style: TextStyle(
+                                            fontSize: 12,
+                                            fontFamily: 'Questrial',
+                                            color: const Color(0xFF6E7191)),
+                                      ),
                                     ),
-                                  ),
-                                ],
-                              ),
-                              // Column(
-                              //   children: [],
-                              // )
-                            ],
-                          ),
-                        ],
+                                  ],
+                                ),
+                                // Column(
+                                //   children: [],
+                                // )
+                              ],
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
