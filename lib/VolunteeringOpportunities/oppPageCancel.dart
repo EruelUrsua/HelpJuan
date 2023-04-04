@@ -124,29 +124,30 @@ class _OppCancelPageState extends State<OppCancelPage> {
                                   ),
                                   backgroundColor: Color(0xFF58A7B9),
                                   title: Center(
-                                    child: new Text(
-                                      '       Are you sure \n you want to Cancel?',
-                                      style: TextStyle(
-                                          fontSize: 18,
-                                          fontWeight: FontWeight.bold,
-                                          fontFamily: 'Questrial',
-                                          color: Colors.white),
+                                    child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        SizedBox(height: 10),
+                                        Text(
+                                          'Are you sure\nyou want to Cancel?',
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                            fontSize: 18,
+                                            fontWeight: FontWeight.bold,
+                                            fontFamily: 'Questrial',
+                                            color: Colors.white,
+                                          ),
+                                        ),
+                                      ],
                                     ),
                                   ),
                                   content: new SingleChildScrollView(
                                     child: new ListBody(
                                       children: [
                                         Container(
-                                          margin: EdgeInsets.only(bottom: 10),
-                                          child: Center(
-                                            child: new Text(
-                                              'Lorem ipsum dolor sit amet, consec',
-                                              style: TextStyle(
-                                                  fontSize: 12,
-                                                  fontFamily: 'Questrial',
-                                                  color: Colors.white),
-                                            ),
-                                          ),
+                                          margin: EdgeInsets.only(
+                                              top: 10, bottom: 10),
                                         ),
                                         new Row(
                                           mainAxisAlignment:
@@ -318,7 +319,7 @@ class _OppCancelPageState extends State<OppCancelPage> {
                         margin: EdgeInsets.only(top: 10, left: 14),
                         alignment: Alignment.centerLeft,
                         child: Text(
-                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
+                          'As a volunteer, you will be providing on-scene patient care and treatment, and assist transporting patients to medical facilities.',
                           style: TextStyle(
                               height: 1.5,
                               fontSize: 14,
@@ -342,7 +343,7 @@ class _OppCancelPageState extends State<OppCancelPage> {
                         margin: EdgeInsets.only(top: 10, left: 14),
                         alignment: Alignment.centerLeft,
                         child: Text(
-                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
+                          'Chat with your fellow volunteers below. Get to know, ask questions, or verify details.',
                           style: TextStyle(
                               fontSize: 14,
                               fontFamily: 'Questrial',
