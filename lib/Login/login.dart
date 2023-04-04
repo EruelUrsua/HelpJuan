@@ -45,7 +45,7 @@ class _LoginState extends State<Login> {
                   Container(
                     margin: EdgeInsets.only(top: 1),
                     child: Text(
-                      'Lorem Ipsum',
+                      '',
                       style: TextStyle(
                         fontSize: 14,
                         color: Colors.white,

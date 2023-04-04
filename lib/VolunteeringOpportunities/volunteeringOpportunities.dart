@@ -21,18 +21,19 @@ class _VolunteeringOpportunitiesPageState
     return LayoutBuilder(builder: (context, constraints) {
       return Scaffold(
         appBar: AppBar(
-          centerTitle: true,
-          actions: <Widget>[
-            IconButton(
-                icon: Icon(
-                  Icons.logout,
-                  color: Colors.white,
-                  size: 25,
-                ),
-                onPressed: () {
-                  Authentication().signOut();
-                })
-          ],
+          title: Image.asset('assets/images/name.png'),
+          // centerTitle: true,
+          // actions: <Widget>[
+          //   IconButton(
+          //       icon: Icon(
+          //         Icons.logout,
+          //         color: Colors.white,
+          //         size: 25,
+          //       ),
+          //       onPressed: () {
+          //         Authentication().signOut();
+          //       })
+          // ],
           automaticallyImplyLeading: false,
         ), // AppBar
         body: Padding(
