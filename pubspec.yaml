@@ -76,6 +76,9 @@ flutter:
     - assets/images/name.png
     - assets/images/Settings.png
     - assets/images/UserX.png
+    - assets/images/MikeOne.png
+    - assets/images/Maria.png
+    - assets/images/Joe.png
    # - assets/icons/
 
   # An image asset can refer to one or more resolution-specific "variants", see
