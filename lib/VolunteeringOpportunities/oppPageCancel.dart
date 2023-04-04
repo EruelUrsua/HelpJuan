@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:solutions_challenge_app/VolunteeringOpportunities/volunteeringOpportunities.dart';
 import 'package:solutions_challenge_app/VolunteeringOpportunities/organizationPage.dart';
 import 'package:solutions_challenge_app/VolunteeringOpportunities/opportunitiesPage.dart';
+import 'package:solutions_challenge_app/chat/chatconvo.dart';
 
 class OppCancelPage extends StatefulWidget {
   const OppCancelPage({super.key});
@@ -33,6 +34,9 @@ class _OppCancelPageState extends State<OppCancelPage> {
                           margin: EdgeInsets.only(top: 30, right: 20),
                           child: CircleAvatar(
                             radius: 35,
+                            backgroundColor: Colors.white,
+                            child: Image.asset('assets/images/RedAlert.png',
+                                fit: BoxFit.contain),
                           ),
                         ),
                         Column(
@@ -41,7 +45,7 @@ class _OppCancelPageState extends State<OppCancelPage> {
                             Container(
                               margin: EdgeInsets.only(top: 30),
                               child: Text(
-                                'Red Cross -',
+                                'Red Alert -',
                                 style: TextStyle(
                                     fontSize: 20,
                                     fontWeight: FontWeight.bold,
@@ -51,7 +55,7 @@ class _OppCancelPageState extends State<OppCancelPage> {
                             ),
                             Container(
                               child: Text(
-                                'Sorsogon Chapter',
+                                'Local Chapter',
                                 style: TextStyle(
                                     fontSize: 20,
                                     fontWeight: FontWeight.bold,
@@ -355,6 +359,13 @@ class _OppCancelPageState extends State<OppCancelPage> {
                             ),
                             prefixIcon: Icon(Icons.send),
                             prefixIconColor: Color(0xFF58A7B9)),
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => chatConvoPage()),
+                          );
+                        },
                       ),
                     )
                   ],
